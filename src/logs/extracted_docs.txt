@@ -1,4 +1,4 @@
-page_content='QUỐC HỘI
+QUỐC HỘI
 -------
 
 CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
@@ -1528,4 +1528,4 @@ CHỦ TỊCH QUỐC HỘI
 
 
 
-Nguyễn Phú Trọng' metadata={'source': '../../documents/23_2008_QH12_82203.docx'}
+Nguyễn Phú Trọng
