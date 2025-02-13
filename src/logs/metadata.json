@@ -1,12 +1,823 @@
-{
-    "source": "23_2008_QH12_82203.docx",
-    "type": "Luật",
-    "title": "Luật GIAO THÔNG ĐƯỜNG BỘ",
-    "number": "23/2008/QH12",
-    "issued_date": "13/11/2008",
-    "map": {
-        "title": "Luật GIAO THÔNG ĐƯỜNG BỘ",
-        "chapter": "Chương VIII ĐIỀU KHOẢN THI HÀNH\n\nĐiều 88. Hiệu lực thi hành\n\n1. Luật này có hiệu lực thi hành từ ngày 01 tháng 7 năm 2009.\n\n2. Luật này thay thế Luật giao thông đường bộ ngày 29 tháng 6 năm 2001.\n\nĐiều 89. Quy định chi tiết và hướng dẫn thi hành\n\nChính phủ và cơ quan có thẩm quyền quy định chi tiết và hướng dẫn thi hành các điều, khoản được giao trong Luật; hướng dẫn những nội dung cần thiết khác của Luật này để đáp ứng yêu cầu quản lý nhà nước. \n\nLuật này đã được Quốc hội nước Cộng hòa xã hội chủ nghĩa Việt Nam khóa XII, kỳ họp thứ 4 thông qua ngày 13 tháng 11 năm 2008.\n\n \n\n \n\nCHỦ TỊCH QUỐC HỘI\n\n\n\n\nNguyễn Phú Trọng",
-        "article": "Điều 89: Quy định chi tiết và hướng dẫn thi hành"
+[
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương I NHỮNG QUY ĐỊNH CHUNG",
+        "article": "Điều 1. Phạm vi điều chỉnh"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương I NHỮNG QUY ĐỊNH CHUNG",
+        "article": "Điều 2. Đối tượng áp dụng"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương I NHỮNG QUY ĐỊNH CHUNG",
+        "article": "Điều 3. Giải thích từ ngữ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương I NHỮNG QUY ĐỊNH CHUNG",
+        "article": "Điều 4. Nguyên tắc hoạt động giao thông đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương I NHỮNG QUY ĐỊNH CHUNG",
+        "article": "Điều 5. Chính sách phát triển giao thông đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương I NHỮNG QUY ĐỊNH CHUNG",
+        "article": "Điều 6. Quy hoạch giao thông vận tải đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương I NHỮNG QUY ĐỊNH CHUNG",
+        "article": "Điều 7. Tuyên truyền, phổ biến, giáo dục pháp luật về giao thông đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương I NHỮNG QUY ĐỊNH CHUNG",
+        "article": "Điều 8. Các hành vi bị nghiêm cấm"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 9. Quy tắc chung"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 10. Hệ thống báo hiệu đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 11. Chấp hành báo hiệu đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 12. Tốc độ xe và khoảng cách giữa các xe"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 13. Sử dụng làn đường"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 14. Vượt xe"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 15. Chuyển hướng xe"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 16. Lùi xe"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 17. Tránh xe đi ngược chiều"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 18. Dừng xe, đỗ xe trên đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 19. Dừng xe, đỗ xe trên đường phố"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 20. Xếp hàng hóa trên phương tiện giao thông đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 21. Trường hợp chở người trên xe ô tô chở hàng"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 22. Quyền ưu tiên của một số loại xe"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 23. Qua phà, qua cầu phao"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 24. Nhường đường tại nơi đường giao nhau"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 25. Đi trên đoạn đường bộ giao nhau cùng mức với đường sắt, cầu đường bộ đi chung với đường sắt"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 26. Giao thông trên đường cao tốc"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 27. Giao thông trong hầm đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 28. Tải trọng và khổ giới hạn của đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 29. Xe kéo xe và xe kéo rơ moóc"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 30. Người điều khiển, người ngồi trên xe mô tô, xe gắn máy"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 31. Người điều khiển, người ngồi trên xe đạp, người điều khiển xe thô sơ khác"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 32. Người đi bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 33. Người khuyết tật, người già yếu tham gia giao thông"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 34. Người dẫn dắt súc vật đi trên đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 35. Các hoạt động khác trên đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 36. Sử dụng đường phố và các hoạt động khác trên đường phố"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 37. Tổ chức giao thông và điều khiển giao thông"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 38. Trách nhiệm của cá nhân, cơ quan, tổ chức khi xảy ra tai nạn giao thông."
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 39. Phân loại đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 40. Đặt tên, số hiệu đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 41. Tiêu chuẩn kỹ thuật đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 42. Quỹ đất dành cho kết cấu hạ tầng giao thông đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 43. Phạm vi đất dành cho đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 44. Bảo đảm yêu cầu kỹ thuật và an toàn giao thông của công trình đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 45. Công trình báo hiệu đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 46. Đầu tư xây dựng, khai thác kết cấu hạ tầng giao thông đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 47. Thi công công trình trên đường bộ đang khai thác"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 48. Quản lý, bảo trì đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 49. Nguồn tài chính cho quản lý, bảo trì đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 50. Xây dựng đoạn đường giao nhau cùng mức giữa đường bộ với đường sắt"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 51. Bến xe, bãi đỗ xe, trạm dừng nghỉ, trạm kiểm tra tải trọng xe, trạm thu phí đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 52. Bảo vệ kết cấu hạ tầng giao thông đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 53. Điều kiện tham gia giao thông của xe cơ giới"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 54. Cấp, thu hồi đăng ký và biển số xe cơ giới"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 55. Bảo đảm quy định về chất lượng an toàn kỹ thuật và bảo vệ môi trường của xe cơ giới tham gia giao thông đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 56. Điều kiện tham gia giao thông của xe thô sơ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 57. Điều kiện tham gia giao thông của xe máy chuyên dùng"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương V NGƯỜI ĐIỀU KHIỂN PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 58. Điều kiện của người lái xe tham gia giao thông"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương V NGƯỜI ĐIỀU KHIỂN PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 59. Giấy phép lái xe"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương V NGƯỜI ĐIỀU KHIỂN PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 60. Tuổi, sức khỏe của người lái xe"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương V NGƯỜI ĐIỀU KHIỂN PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 61. Đào tạo lái xe, sát hạch để cấp giấy phép lái xe"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương V NGƯỜI ĐIỀU KHIỂN PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 62. Điều kiện của người điều khiển xe máy chuyên dùng tham gia giao thông"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương V NGƯỜI ĐIỀU KHIỂN PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 63. Điều kiện của người điều khiển xe thô sơ tham gia giao thông"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+        "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+        "article": "Điều 64. Hoạt động vận tải đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+        "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+        "article": "Điều 65. Thời gian làm việc của người lái xe ô tô"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+        "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+        "article": "Điều 66. Kinh doanh vận tải bằng xe ô tô"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+        "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+        "article": "Điều 67. Điều kiện kinh doanh vận tải bằng xe ô tô"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+        "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+        "article": "Điều 68. Vận tải hành khách bằng xe ô tô"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+        "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+        "article": "Điều 69. Quyền và nghĩa vụ của người kinh doanh vận tải hành khách"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+        "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+        "article": "Điều 70. Trách nhiệm của người lái xe và nhân viên phục vụ trên xe ô tô vận tải hành khách"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+        "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+        "article": "Điều 71. Quyền và nghĩa vụ của hành khách"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+        "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+        "article": "Điều 72. Vận tải hàng hóa bằng xe ô tô"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+        "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+        "article": "Điều 73. Quyền và nghĩa vụ của người kinh doanh vận tải hàng hóa"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+        "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+        "article": "Điều 74. Quyền và nghĩa vụ của người thuê vận tải hàng hóa"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+        "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+        "article": "Điều 75. Quyền và nghĩa vụ của người nhận hàng"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+        "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+        "article": "Điều 76. Vận chuyển hàng siêu trường, siêu trọng"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+        "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+        "article": "Điều 77. Vận chuyển động vật sống"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+        "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+        "article": "Điều 78. Vận chuyển hàng nguy hiểm"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+        "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+        "article": "Điều 79. Hoạt động vận tải đường bộ trong đô thị"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+        "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+        "article": "Điều 80. Vận chuyển hành khách, hàng hóa bằng xe thô sơ, xe gắn máy, xe mô tô hai bánh, xe mô tô ba bánh và các loại xe tương tự"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+        "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+        "article": "Điều 81. Vận tải đa phương thức"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+        "section": "Mục 2. DỊCH VỤ HỖ TRỢ VẬN TẢI ĐƯỜNG BỘ",
+        "article": "Điều 82. Dịch vụ hỗ trợ vận tải đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+        "section": "Mục 2. DỊCH VỤ HỖ TRỢ VẬN TẢI ĐƯỜNG BỘ",
+        "article": "Điều 83. Tổ chức hoạt động của bến xe ô tô, bãi đỗ xe, trạm dừng nghỉ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VII QUẢN LÝ NHÀ NƯỚC VỀ GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 84. Nội dung quản lý nhà nước về giao thông đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VII QUẢN LÝ NHÀ NƯỚC VỀ GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 85. Trách nhiệm quản lý nhà nước về giao thông đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VII QUẢN LÝ NHÀ NƯỚC VỀ GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 86. Thanh tra đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VII QUẢN LÝ NHÀ NƯỚC VỀ GIAO THÔNG ĐƯỜNG BỘ",
+        "article": "Điều 87. Tuần tra, kiểm soát của cảnh sát giao thông đường bộ"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VIII ĐIỀU KHOẢN THI HÀNH",
+        "article": "Điều 88. Hiệu lực thi hành"
+    },
+    {
+        "source": "23_2008_QH12_82203.docx",
+        "type": "Luật",
+        "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+        "number": "23/2008/QH12",
+        "issued_date": "13/11/2008",
+        "chapter": "Chương VIII ĐIỀU KHOẢN THI HÀNH",
+        "article": "Điều 89. Quy định chi tiết và hướng dẫn thi hành"
     }
-}
+]

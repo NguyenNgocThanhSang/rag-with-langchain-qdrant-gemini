@@ -1,36 +1,41 @@
-page_content='QUỐC HỘI
--------
-
-CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
-Độc lập - Tự do - Hạnh phúc
----------
-
-Luật số: 23/2008/QH12
-
-Hà Nội, ngày 13 tháng 11 năm 2008
-
- 
-
-LUẬT
-
-GIAO THÔNG ĐƯỜNG BỘ
-
-Căn cứ Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam năm 1992 đã được sửa đổi, bổ sung một số điều theo Nghị quyết số 51/2001/QH10;
-
-Quốc hội ban hành Luật giao thông đường bộ.
-
-Chương I
-
-NHỮNG QUY ĐỊNH CHUNG
-
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương I NHỮNG QUY ĐỊNH CHUNG",
+    "article": "Điều 1. Phạm vi điều chỉnh"
+}
+Content:
 Điều 1. Phạm vi điều chỉnh
 
 Luật này quy định về quy tắc giao thông đường bộ; kết cấu hạ tầng giao thông đường bộ; phương tiện và người tham gia giao thông đường bộ; vận tải đường bộ và quản lý nhà nước về giao thông đường bộ.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương I NHỮNG QUY ĐỊNH CHUNG",
+    "article": "Điều 2. Đối tượng áp dụng"
+}
+Content:
 Điều 2. Đối tượng áp dụng
 
 Luật này áp dụng đối với tổ chức, cá nhân liên quan đến giao thông đường bộ trên lãnh thổ nước Cộng hòa xã hội chủ nghĩa Việt Nam.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương I NHỮNG QUY ĐỊNH CHUNG",
+    "article": "Điều 3. Giải thích từ ngữ"
+}
+Content:
 Điều 3. Giải thích từ ngữ
 
 Trong Luật này, các từ ngữ dưới đây được hiểu như sau:
@@ -99,6 +104,16 @@ Trong Luật này, các từ ngữ dưới đây được hiểu như sau:
 
 32. Cơ quan quản lý đường bộ là cơ quan thực hiện chức năng quản lý nhà nước chuyên ngành thuộc Bộ Giao thông vận tải; cơ quan chuyên môn thuộc Ủy ban nhân dân tỉnh, thành phố trực thuộc trung ương (sau đây gọi chung là cấp tỉnh), Ủy ban nhân dân huyện, quận, thị xã, thành phố thuộc tỉnh (sau đây gọi chung là cấp huyện); Ủy ban nhân dân xã, phường, thị trấn (sau đây gọi chung là cấp xã).
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương I NHỮNG QUY ĐỊNH CHUNG",
+    "article": "Điều 4. Nguyên tắc hoạt động giao thông đường bộ"
+}
+Content:
 Điều 4. Nguyên tắc hoạt động giao thông đường bộ
 
 1. Hoạt động giao thông đường bộ phải bảo đảm thông suốt, trật tự, an toàn, hiệu quả; góp phần phát triển kinh tế - xã hội, bảo đảm quốc phòng, an ninh và bảo vệ môi trường.
@@ -113,6 +128,16 @@ Trong Luật này, các từ ngữ dưới đây được hiểu như sau:
 
 6. Mọi hành vi vi phạm pháp luật giao thông đường bộ phải được phát hiện, ngăn chặn kịp thời, xử lý nghiêm minh, đúng pháp luật.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương I NHỮNG QUY ĐỊNH CHUNG",
+    "article": "Điều 5. Chính sách phát triển giao thông đường bộ"
+}
+Content:
 Điều 5. Chính sách phát triển giao thông đường bộ
 
 1. Nhà nước tập trung các nguồn lực phát triển giao thông đường bộ, ưu tiên đầu tư phát triển kết cấu hạ tầng giao thông đường bộ ở vùng kinh tế trọng điểm, các thành phố, miền núi, vùng sâu, vùng xa, biên giới, hải đảo, vùng dân tộc thiểu số; có chính sách huy động các nguồn lực để quản lý, bảo trì đường bộ.
@@ -121,6 +146,16 @@ Trong Luật này, các từ ngữ dưới đây được hiểu như sau:
 
 3. Nhà nước khuyến khích, tạo điều kiện cho tổ chức, cá nhân Việt Nam và nước ngoài đầu tư, kinh doanh khai thác kết cấu hạ tầng giao thông đường bộ và hoạt động vận tải đường bộ; nghiên cứu, ứng dụng khoa học, công nghệ tiên tiến và đào tạo nguồn nhân lực trong lĩnh vực giao thông đường bộ.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương I NHỮNG QUY ĐỊNH CHUNG",
+    "article": "Điều 6. Quy hoạch giao thông vận tải đường bộ"
+}
+Content:
 Điều 6. Quy hoạch giao thông vận tải đường bộ
 
 1. Quy hoạch giao thông vận tải đường bộ là quy hoạch lĩnh vực chuyên ngành, gồm quy hoạch kết cấu hạ tầng, quy hoạch phương tiện giao thông và vận tải đường bộ.
@@ -143,6 +178,16 @@ Quy hoạch giao thông vận tải đường bộ sau khi được phê duyệt
 
 8. Nhà nước bảo đảm vốn ngân sách nhà nước và có chính sách huy động các nguồn vốn khác cho công tác lập quy hoạch giao thông vận tải đường bộ.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương I NHỮNG QUY ĐỊNH CHUNG",
+    "article": "Điều 7. Tuyên truyền, phổ biến, giáo dục pháp luật về giao thông đường bộ"
+}
+Content:
 Điều 7. Tuyên truyền, phổ biến, giáo dục pháp luật về giao thông đường bộ
 
 1. Cơ quan thông tin, tuyên truyền có trách nhiệm tổ chức tuyên truyền, phổ biến pháp luật về giao thông đường bộ thường xuyên, rộng rãi đến toàn dân.
@@ -157,6 +202,16 @@ Quy hoạch giao thông vận tải đường bộ sau khi được phê duyệt
 
 Thành viên trong gia đình có trách nhiệm tuyên truyền, giáo dục, nhắc nhở thành viên khác chấp hành pháp luật về giao thông đường bộ.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương I NHỮNG QUY ĐỊNH CHUNG",
+    "article": "Điều 8. Các hành vi bị nghiêm cấm"
+}
+Content:
 Điều 8. Các hành vi bị nghiêm cấm
 
 1. Phá hoại đường, cầu, hầm, bến phà đường bộ, đèn tín hiệu, cọc tiêu, biển báo hiệu, gương cầu, dải phân cách, hệ thống thoát nước và các công trình, thiết bị khác thuộc kết cấu hạ tầng giao thông đường bộ. 
@@ -209,16 +264,32 @@ Thành viên trong gia đình có trách nhiệm tuyên truyền, giáo dục, n
 
 23. Hành vi vi phạm quy tắc giao thông đường bộ, hành vi khác gây nguy hiểm cho người và phương tiện tham gia giao thông đường bộ.
 
-Chương II
-
-QUY TẮC GIAO THÔNG ĐƯỜNG BỘ
-
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 9. Quy tắc chung"
+}
+Content:
 Điều 9. Quy tắc chung
 
 1. Người tham gia giao thông phải đi bên phải theo chiều đi của mình, đi đúng làn đường, phần đường quy định và phải chấp hành hệ thống báo hiệu đường bộ.
 
 2. Xe ô tô có trang bị dây an toàn thì người lái xe và người ngồi hàng ghế phía trước trong xe ô tô phải thắt dây an toàn.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 10. Hệ thống báo hiệu đường bộ"
+}
+Content:
 Điều 10. Hệ thống báo hiệu đường bộ
 
 1. Hệ thống báo hiệu đường bộ gồm hiệu lệnh của người điều khiển giao thông; tín hiệu đèn giao thông, biển báo hiệu, vạch kẻ đường, cọc tiêu hoặc tường bảo vệ, rào chắn.
@@ -259,6 +330,16 @@ d) Biển chỉ dẫn để chỉ dẫn hướng đi hoặc các điều cần b
 
 8. Bộ trưởng Bộ Giao thông vận tải quy định cụ thể về báo hiệu đường bộ.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 11. Chấp hành báo hiệu đường bộ"
+}
+Content:
 Điều 11. Chấp hành báo hiệu đường bộ
 
 1. Người tham gia giao thông phải chấp hành hiệu lệnh và chỉ dẫn của hệ thống báo hiệu đường bộ.
@@ -271,6 +352,16 @@ d) Biển chỉ dẫn để chỉ dẫn hướng đi hoặc các điều cần b
 
 Những nơi không có vạch kẻ đường cho người đi bộ, người điều khiển phương tiện phải quan sát, nếu thấy người đi bộ, xe lăn của người khuyết tật đang qua đường thì phải giảm tốc độ, nhường đường cho người đi bộ, xe lăn của người khuyết tật qua đường bảo đảm an toàn.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 12. Tốc độ xe và khoảng cách giữa các xe"
+}
+Content:
 Điều 12. Tốc độ xe và khoảng cách giữa các xe
 
 1. Người lái xe, người điều khiển xe máy chuyên dùng phải tuân thủ quy định về tốc độ xe chạy trên đường và phải giữ một khoảng cách an toàn đối với xe chạy liền trước xe của mình; ở nơi có biển báo "Cự ly tối thiểu giữa hai xe" phải giữ khoảng cách không nhỏ hơn số ghi trên biển báo.
@@ -279,6 +370,16 @@ Những nơi không có vạch kẻ đường cho người đi bộ, người đ
 
 3. Chủ tịch Uỷ ban nhân dân cấp tỉnh tổ chức thực hiện việc đặt biển báo tốc độ trên các tuyến đường do địa phương quản lý.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 13. Sử dụng làn đường"
+}
+Content:
 Điều 13. Sử dụng làn đường
 
 1. Trên đường có nhiều làn đường cho xe đi cùng chiều được phân biệt bằng vạch kẻ phân làn đường, người điều khiển phương tiện phải cho xe đi trong một làn đường và chỉ được chuyển làn đường ở những nơi cho phép; khi chuyển làn đường phải có tín hiệu báo trước và phải bảo đảm an toàn.
@@ -287,6 +388,16 @@ Những nơi không có vạch kẻ đường cho người đi bộ, người đ
 
 3. Phương tiện tham gia giao thông đường bộ di chuyển với tốc độ thấp hơn phải đi về bên phải.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 14. Vượt xe"
+}
+Content:
 Điều 14. Vượt xe 
 
 1. Xe xin vượt phải có báo hiệu bằng đèn hoặc còi; trong đô thị và khu đông dân cư từ 22 giờ đến 5 giờ chỉ được báo hiệu xin vượt bằng đèn.
@@ -317,6 +428,16 @@ d) Nơi đường giao nhau, đường bộ giao nhau cùng mức với đườn
 
 e) Xe được quyền ưu tiên đang phát tín hiệu ưu tiên đi làm nhiệm vụ.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 15. Chuyển hướng xe"
+}
+Content:
 Điều 15. Chuyển hướng xe
 
 1. Khi muốn chuyển hướng, người điều khiển phương tiện phải giảm tốc độ và có tín hiệu báo hướng rẽ.
@@ -327,12 +448,32 @@ e) Xe được quyền ưu tiên đang phát tín hiệu ưu tiên đi làm nhi�
 
 4. Không được quay đầu xe ở phần đường dành cho người đi bộ qua đường, trên cầu, đầu cầu, gầm cầu vượt, ngầm, trong hầm đường bộ, đường cao tốc, tại nơi đường bộ giao nhau cùng mức với đường sắt, đường hẹp, đường dốc, đoạn đường cong tầm nhìn bị che khuất.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 16. Lùi xe"
+}
+Content:
 Điều 16. Lùi xe
 
 1. Khi lùi xe, người điều khiển phải quan sát phía sau, có tín hiệu cần thiết và chỉ khi nào thấy không nguy hiểm mới được lùi.
 
 2. Không được lùi xe ở khu vực cấm dừng, trên phần đường dành cho người đi bộ qua đường, nơi đường bộ giao nhau, đường bộ giao nhau cùng mức với đường sắt, nơi tầm nhìn bị che khuất, trong hầm đường bộ, đường cao tốc.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 17. Tránh xe đi ngược chiều"
+}
+Content:
 Điều 17. Tránh xe đi ngược chiều
 
 1. Trên đường không phân chia thành hai chiều xe chạy riêng biệt, hai xe đi ngược chiều tránh nhau, người điều khiển phải giảm tốc độ và cho xe đi về bên phải theo chiều xe chạy của mình.
@@ -345,8 +486,18 @@ b) Xe xuống dốc phải nhường đường cho xe đang lên dốc;
 
 c) Xe nào có chướng ngại vật phía trước phải nhường đường cho xe không có chướng ngại vật đi trước.
 
-3. Xe cơ giới đi ngược chiều gặp nhau không được dùng đèn chiếu xa. 
+3. Xe cơ giới đi ngược chiều gặp nhau không được dùng đèn chiếu xa.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 18. Dừng xe, đỗ xe trên đường bộ"
+}
+Content:
 Điều 18. Dừng xe, đỗ xe trên đường bộ
 
 1. Dừng xe là trạng thái đứng yên tạm thời của phương tiện giao thông trong một khoảng thời gian cần thiết đủ để cho người lên, xuống phương tiện, xếp dỡ hàng hóa hoặc thực hiện công việc khác.
@@ -393,6 +544,16 @@ k) Trong phạm vi an toàn của đường sắt;
 
 l) Che khuất biển báo hiệu đường bộ.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 19. Dừng xe, đỗ xe trên đường phố"
+}
+Content:
 Điều 19. Dừng xe, đỗ xe trên đường phố
 
 Người điều khiển phương tiện khi dừng xe, đỗ xe trên đường phố phải tuân theo quy định tại Điều 18 của Luật này và các quy định sau đây:
@@ -401,6 +562,16 @@ Người điều khiển phương tiện khi dừng xe, đỗ xe trên đường
 
 2. Không được dừng xe, đỗ xe trên đường xe điện, trên miệng cống thoát nước, miệng hầm của đường điện thoại, điện cao thế, chỗ dành riêng cho xe chữa cháy lấy nước. Không được để phương tiện giao thông ở lòng đường, hè phố trái quy định.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 20. Xếp hàng hóa trên phương tiện giao thông đường bộ"
+}
+Content:
 Điều 20. Xếp hàng hóa trên phương tiện giao thông đường bộ
 
 1. Hàng hóa xếp trên xe phải gọn gàng, chằng buộc chắc chắn, không để rơi vãi dọc đường, không kéo lê hàng hóa trên mặt đường và không cản trở việc điều khiển xe.
@@ -409,6 +580,16 @@ Người điều khiển phương tiện khi dừng xe, đỗ xe trên đường
 
 3. Bộ trưởng Bộ Giao thông vận tải quy định cụ thể việc xếp hàng hóa trên phương tiện giao thông đường bộ.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 21. Trường hợp chở người trên xe ô tô chở hàng"
+}
+Content:
 Điều 21. Trường hợp chở người trên xe ô tô chở hàng
 
 1. Chỉ được chở người trên xe ô tô chở hàng trong các trường hợp sau đây:
@@ -421,6 +602,16 @@ c) Giải tỏa người ra khỏi khu vực nguy hiểm hoặc trong trường 
 
 2. Xe ô tô chở người trong các trường hợp quy định tại khoản 1 Điều này phải có thùng cố định, bảo đảm an toàn khi tham gia giao thông.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 22. Quyền ưu tiên của một số loại xe"
+}
+Content:
 Điều 22. Quyền ưu tiên của một số loại xe
 
 1. Những xe sau đây được quyền ưu tiên đi trước xe khác khi qua đường giao nhau từ bất kỳ hướng nào tới theo thứ tự:
@@ -441,6 +632,16 @@ Chính phủ quy định cụ thể tín hiệu của xe được quyền ưu ti
 
 3. Khi có tín hiệu của xe được quyền ưu tiên, người tham gia giao thông phải nhanh chóng giảm tốc độ, tránh hoặc dừng lại sát lề đường bên phải để nhường đường. Không được gây cản trở xe được quyền ưu tiên.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 23. Qua phà, qua cầu phao"
+}
+Content:
 Điều 23. Qua phà, qua cầu phao
 
 1. Khi đến bến phà, cầu phao, các xe phải xếp hàng trật tự, đúng nơi quy định, không làm cản trở giao thông.
@@ -461,6 +662,16 @@ d) Xe chở khách công cộng.
 
 Trong trường hợp các xe cùng loại ưu tiên đến bến phà, cầu phao thì xe nào đến trước được qua trước.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 24. Nhường đường tại nơi đường giao nhau"
+}
+Content:
 Điều 24. Nhường đường tại nơi đường giao nhau
 
 Khi đến gần đường giao nhau, người điều khiển phương tiện phải cho xe giảm tốc độ và nhường đường theo quy định sau đây:
@@ -471,6 +682,16 @@ Khi đến gần đường giao nhau, người điều khiển phương tiện p
 
 3. Tại nơi đường giao nhau giữa đường không ưu tiên và đường ưu tiên hoặc giữa đường nhánh và đường chính thì xe đi từ đường không ưu tiên hoặc đường nhánh phải nhường đường cho xe đi trên đường ưu tiên hoặc đường chính từ bất kỳ hướng nào tới.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 25. Đi trên đoạn đường bộ giao nhau cùng mức với đường sắt, cầu đường bộ đi chung với đường sắt"
+}
+Content:
 Điều 25. Đi trên đoạn đường bộ giao nhau cùng mức với đường sắt, cầu đường bộ đi chung với đường sắt 
 
 1. Trên đoạn đường bộ giao nhau cùng mức với đường sắt, cầu đường bộ đi chung với đường sắt, phương tiện giao thông đường sắt được quyền ưu tiên đi trước.
@@ -485,6 +706,16 @@ Khi đến gần đường giao nhau, người điều khiển phương tiện p
 
 6. Những người có mặt tại nơi phương tiện tham gia giao thông đường bộ bị hư hỏng trên đoạn đường bộ giao nhau cùng mức với đường sắt có trách nhiệm giúp đỡ người điều khiển phương tiện đưa phương tiện ra khỏi phạm vi an toàn đường sắt.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 26. Giao thông trên đường cao tốc"
+}
+Content:
 Điều 26. Giao thông trên đường cao tốc
 
 1. Người lái xe, người điều khiển xe máy chuyên dùng trên đường cao tốc ngoài việc tuân thủ các quy tắc giao thông quy định tại Luật này còn phải thực hiện các quy định sau đây:
@@ -503,6 +734,16 @@ d) Không được cho xe chạy quá tốc độ tối đa và dưới tốc đ
 
 4. Người đi bộ, xe thô sơ, xe gắn máy, xe mô tô và máy kéo; xe máy chuyên dùng có tốc độ thiết kế nhỏ hơn 70 km/h không được đi vào đường cao tốc, trừ người, phương tiện, thiết bị phục vụ việc quản lý, bảo trì đường cao tốc.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 27. Giao thông trong hầm đường bộ"
+}
+Content:
 Điều 27. Giao thông trong hầm đường bộ
 
 Người điều khiển phương tiện trong hầm đường bộ ngoài việc tuân thủ các quy tắc giao thông quy định tại Luật này còn phải thực hiện các quy định sau đây:
@@ -511,6 +752,16 @@ Người điều khiển phương tiện trong hầm đường bộ ngoài việ
 
 2. Chỉ được dừng xe, đỗ xe ở nơi quy định.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 28. Tải trọng và khổ giới hạn của đường bộ"
+}
+Content:
 Điều 28. Tải trọng và khổ giới hạn của đường bộ
 
 1. Người điều khiển phương tiện phải tuân thủ các quy định về tải trọng, khổ giới hạn của đường bộ và chịu sự kiểm tra của cơ quan có thẩm quyền.
@@ -521,6 +772,16 @@ Người điều khiển phương tiện trong hầm đường bộ ngoài việ
 
 4. Chủ tịch Uỷ ban nhân dân cấp tỉnh công bố về tải trọng, khổ giới hạn của đường bộ do địa phương quản lý.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 29. Xe kéo xe và xe kéo rơ moóc"
+}
+Content:
 Điều 29. Xe kéo xe và xe kéo rơ moóc
 
 1. Một xe ô tô chỉ được kéo theo một xe ô tô hoặc xe máy chuyên dùng khác khi xe này không tự chạy được và phải bảo đảm các quy định sau đây:
@@ -539,8 +800,18 @@ a) Xe kéo rơ moóc, xe kéo sơ mi rơ moóc kéo thêm rơ moóc hoặc xe kh
 
 b) Chở người trên xe được kéo;
 
-c) Kéo theo xe thô sơ, xe gắn máy, xe mô tô. 
+c) Kéo theo xe thô sơ, xe gắn máy, xe mô tô.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 30. Người điều khiển, người ngồi trên xe mô tô, xe gắn máy"
+}
+Content:
 Điều 30. Người điều khiển, người ngồi trên xe mô tô, xe gắn máy
 
 1. Người điều khiển xe mô tô hai bánh, xe gắn máy chỉ được chở một người, trừ những trường hợp sau thì được chở tối đa hai người:
@@ -579,6 +850,16 @@ d) Đứng trên yên, giá đèo hàng hoặc ngồi trên tay lái;
 
 đ) Hành vi khác gây mất trật tự, an toàn giao thông.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 31. Người điều khiển, người ngồi trên xe đạp, người điều khiển xe thô sơ khác"
+}
+Content:
 Điều 31. Người điều khiển, người ngồi trên xe đạp, người điều khiển xe thô sơ khác
 
 1. Người điều khiển xe đạp chỉ được chở một người, trừ trường hợp chở thêm một trẻ em dưới 7 tuổi thì được chở tối đa hai người.
@@ -591,6 +872,16 @@ Người điều khiển xe đạp phải thực hiện quy định tại khoả
 
 4. Hàng hóa xếp trên xe thô sơ phải bảo đảm an toàn, không gây cản trở giao thông và che khuất tầm nhìn của người điều khiển.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 32. Người đi bộ"
+}
+Content:
 Điều 32. Người đi bộ
 
 1. Người đi bộ phải đi trên hè phố, lề đường; trường hợp đường không có hè phố, lề đường thì người đi bộ phải đi sát mép đường. 
@@ -603,6 +894,16 @@ Người điều khiển xe đạp phải thực hiện quy định tại khoả
 
 5. Trẻ em dưới 7 tuổi khi đi qua đường đô thị, đường thường xuyên có xe cơ giới qua lại phải có người lớn dắt; mọi người có trách nhiệm giúp đỡ trẻ em dưới 7 tuổi khi đi qua đường.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 33. Người khuyết tật, người già yếu tham gia giao thông"
+}
+Content:
 Điều 33. Người khuyết tật, người già yếu tham gia giao thông
 
 1. Người khuyết tật sử dụng xe lăn không có động cơ được đi trên hè phố và nơi có vạch kẻ đường dành cho người đi bộ. 
@@ -611,12 +912,32 @@ Người điều khiển xe đạp phải thực hiện quy định tại khoả
 
 3. Mọi người có trách nhiệm giúp đỡ người khuyết tật, người già yếu khi đi qua đường.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 34. Người dẫn dắt súc vật đi trên đường bộ"
+}
+Content:
 Điều 34. Người dẫn dắt súc vật đi trên đường bộ
 
 1. Người dẫn dắt súc vật đi trên đường bộ phải cho súc vật đi sát mép đường và bảo đảm vệ sinh trên đường; trường hợp cần cho súc vật đi ngang qua đường thì phải quan sát và chỉ được đi qua đường khi có đủ điều kiện an toàn.
 
-2. Không được dẫn dắt súc vật đi vào phần đường dành cho xe cơ giới. 
+2. Không được dẫn dắt súc vật đi vào phần đường dành cho xe cơ giới.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 35. Các hoạt động khác trên đường bộ"
+}
+Content:
 Điều 35. Các hoạt động khác trên đường bộ
 
 1. Tổ chức hoạt động văn hóa, thể thao, diễu hành, lễ hội trên đường bộ thực hiện theo quy định sau đây:
@@ -647,6 +968,16 @@ h) Sử dụng bàn trượt, pa-tanh, các thiết bị tương tự trên ph�
 
 i) Hành vi khác gây cản trở giao thông.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 36. Sử dụng đường phố và các hoạt động khác trên đường phố"
+}
+Content:
 Điều 36. Sử dụng đường phố và các hoạt động khác trên đường phố 
 
 1. Lòng đường và hè phố chỉ được sử dụng cho mục đích giao thông.
@@ -661,6 +992,16 @@ b) Đổ rác hoặc phế thải không đúng nơi quy định;
 
 c) Xây, đặt bục, bệ trái phép trên đường.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 37. Tổ chức giao thông và điều khiển giao thông"
+}
+Content:
 Điều 37. Tổ chức giao thông và điều khiển giao thông
 
 1. Tổ chức giao thông gồm các nội dung sau đây: 
@@ -681,8 +1022,18 @@ b) Chủ tịch Ủy ban nhân dân cấp tỉnh chịu trách nhiệm tổ ch�
 
 a) Chỉ huy, điều khiển giao thông trên đường; hướng dẫn, bắt buộc người tham gia giao thông chấp hành quy tắc giao thông; 
 
-b) Khi có tình huống gây ách tắc giao thông hoặc có yêu cầu cần thiết khác về bảo đảm an ninh, trật tự được tạm thời đình chỉ đi lại ở một số đoạn đường nhất định, phân lại luồng, phân lại tuyến và nơi tạm dừng xe, đỗ xe. 
+b) Khi có tình huống gây ách tắc giao thông hoặc có yêu cầu cần thiết khác về bảo đảm an ninh, trật tự được tạm thời đình chỉ đi lại ở một số đoạn đường nhất định, phân lại luồng, phân lại tuyến và nơi tạm dừng xe, đỗ xe.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương II QUY TẮC GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 38. Trách nhiệm của cá nhân, cơ quan, tổ chức khi xảy ra tai nạn giao thông."
+}
+Content:
 Điều 38. Trách nhiệm của cá nhân, cơ quan, tổ chức khi xảy ra tai nạn giao thông.
 
 1. Người điều khiển phương tiện và những người liên quan trực tiếp đến vụ tai nạn có trách nhiệm sau đây: 
@@ -715,10 +1066,16 @@ Trường hợp vụ tai nạn vượt quá khả năng giải quyết, Uỷ ban
 
 6. Bộ Công an có trách nhiệm thống kê, tổng hợp, xây dựng cơ sở dữ liệu thông tin về tai nạn giao thông đường bộ, cung cấp cho cơ quan, tổ chức, cá nhân theo quy định của pháp luật.
 
-Chương III
-
-KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ
-
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 39. Phân loại đường bộ"
+}
+Content:
 Điều 39. Phân loại đường bộ
 
 1. Mạng lưới đường bộ được chia thành sáu hệ thống, gồm quốc lộ, đường tỉnh, đường huyện, đường xã, đường đô thị và đường chuyên dùng, quy định như sau:
@@ -745,6 +1102,16 @@ c) Hệ thống đường huyện, đường xã do Chủ tịch Ủy ban nhân 
 
 d) Hệ thống đường chuyên dùng do cơ quan, tổ chức, cá nhân có đường chuyên dùng quyết định sau khi có ý kiến chấp thuận bằng văn bản của Bộ trưởng Bộ Giao thông vận tải đối với đường chuyên dùng đấu nối vào quốc lộ; ý kiến chấp thuận bằng văn bản của Chủ tịch Ủy ban nhân dân cấp tỉnh đối với đường chuyên dùng đấu nối vào đường tỉnh, đường đô thị, đường huyện; ý kiến chấp thuận bằng văn bản của Chủ tịch Ủy ban nhân dân cấp huyện đối với đường chuyên dùng đấu nối vào đường xã.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 40. Đặt tên, số hiệu đường bộ"
+}
+Content:
 Điều 40. Đặt tên, số hiệu đường bộ
 
 1. Đường bộ được đặt tên hoặc số hiệu như sau:
@@ -757,6 +1124,16 @@ b) Tên, số hiệu đường bộ tham gia vào mạng lưới đường bộ 
 
 3. Chính phủ quy định cụ thể việc đặt tên, số hiệu đường bộ.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 41. Tiêu chuẩn kỹ thuật đường bộ"
+}
+Content:
 Điều 41. Tiêu chuẩn kỹ thuật đường bộ
 
 1. Đường bộ được chia theo cấp kỹ thuật gồm đường cao tốc và các cấp kỹ thuật khác.
@@ -771,12 +1148,32 @@ b) Bộ Khoa học và Công nghệ ban hành tiêu chuẩn kỹ thuật quốc 
 
 4. Trường hợp áp dụng tiêu chuẩn kỹ thuật đường bộ của nước ngoài thì phải được chấp thuận của cơ quan quản lý nhà nước có thẩm quyền.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 42. Quỹ đất dành cho kết cấu hạ tầng giao thông đường bộ"
+}
+Content:
 Điều 42. Quỹ đất dành cho kết cấu hạ tầng giao thông đường bộ
 
 1. Quỹ đất dành cho kết cấu hạ tầng giao thông đường bộ được xác định tại quy hoạch kết cấu hạ tầng giao thông đường bộ. Ủy ban nhân dân cấp tỉnh xác định và quản lý quỹ đất dành cho dự án xây dựng kết cấu hạ tầng giao thông đường bộ theo quy hoạch đã được phê duyệt.
 
 2. Tỷ lệ quỹ đất giao thông đô thị so với đất xây dựng đô thị phải bảo đảm từ 16% đến 26%. Chính phủ quy định cụ thể tỷ lệ quỹ đất phù hợp với loại đô thị.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 43. Phạm vi đất dành cho đường bộ"
+}
+Content:
 Điều 43. Phạm vi đất dành cho đường bộ
 
 1. Phạm vi đất dành cho đường bộ gồm đất của đường bộ và đất hành lang an toàn đường bộ.
@@ -791,6 +1188,16 @@ Trường hợp việc sử dụng đất gây ảnh hưởng đến việc bả
 
 5. Chính phủ quy định cụ thể phạm vi đất dành cho đường bộ, việc sử dụng, khai thác đất hành lang an toàn đường bộ và việc xây dựng các công trình thiết yếu trong phạm vi đất dành cho đường bộ.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 44. Bảo đảm yêu cầu kỹ thuật và an toàn giao thông của công trình đường bộ"
+}
+Content:
 Điều 44. Bảo đảm yêu cầu kỹ thuật và an toàn giao thông của công trình đường bộ
 
 1. Công trình đường bộ xây dựng mới, nâng cấp và cải tạo phải bảo đảm tiêu chuẩn kỹ thuật và điều kiện an toàn giao thông cho người, phương tiện tham gia giao thông đường bộ, trong đó có người đi bộ và người khuyết tật. Đường đô thị xây dựng phải có hè phố, phần đường, cầu vượt, hầm và tổ chức giao thông cho người đi bộ, người khuyết tật đi lại an toàn, thuận tiện.
@@ -809,6 +1216,16 @@ c) Việc đấu nối các đường từ khu đô thị, khu công nghiệp, k
 
 5. Bên cạnh tuyến quốc lộ đi qua khu dân cư phải có đường gom để phục vụ yêu cầu dân sinh.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 45. Công trình báo hiệu đường bộ"
+}
+Content:
 Điều 45. Công trình báo hiệu đường bộ 
 
 1. Công trình báo hiệu đường bộ bao gồm:
@@ -829,6 +1246,16 @@ e) Công trình báo hiệu khác.
 
 3. Không được gắn vào công trình báo hiệu đường bộ các nội dung không liên quan tới ý nghĩa, mục đích của công trình báo hiệu đường bộ.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 46. Đầu tư xây dựng, khai thác kết cấu hạ tầng giao thông đường bộ"
+}
+Content:
 Điều 46. Đầu tư xây dựng, khai thác kết cấu hạ tầng giao thông đường bộ 
 
 1. Đầu tư xây dựng kết cấu hạ tầng giao thông đường bộ là việc đầu tư xây dựng mới, nâng cấp, cải tạo kết cấu hạ tầng giao thông đường bộ.
@@ -841,6 +1268,16 @@ e) Công trình báo hiệu khác.
 
 5. Kết cấu hạ tầng giao thông đường bộ sau khi xây dựng, nâng cấp, cải tạo phải được cơ quan có thẩm quyền nghiệm thu, quyết định đưa vào khai thác theo quy định.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 47. Thi công công trình trên đường bộ đang khai thác"
+}
+Content:
 Điều 47. Thi công công trình trên đường bộ đang khai thác
 
 1. Thi công công trình trên đường bộ đang khai thác chỉ được tiến hành khi có giấy phép của cơ quan nhà nước có thẩm quyền, thực hiện theo đúng nội dung của giấy phép và quy định của pháp luật về xây dựng.
@@ -857,6 +1294,16 @@ c) Khi thi công xong phải hoàn trả phần đường theo nguyên trạng; 
 
 4. Đơn vị thi công không thực hiện các biện pháp bảo đảm giao thông thông suốt, an toàn theo quy định, để xảy ra tai nạn giao thông, ùn tắc giao thông, ô nhiễm môi trường nghiêm trọng thì phải chịu trách nhiệm theo quy định của pháp luật.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 48. Quản lý, bảo trì đường bộ"
+}
+Content:
 Điều 48. Quản lý, bảo trì đường bộ 
 
 1. Bảo trì đường bộ là thực hiện các công việc bảo dưỡng và sửa chữa đường bộ nhằm duy trì tiêu chuẩn kỹ thuật của đường đang khai thác.
@@ -877,6 +1324,16 @@ c) Đường chuyên dùng, đường không do Nhà nước quản lý khai th�
 
 4. Bộ trưởng Bộ Giao thông vận tải quy định việc quản lý, bảo trì đường bộ.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 49. Nguồn tài chính cho quản lý, bảo trì đường bộ"
+}
+Content:
 Điều 49. Nguồn tài chính cho quản lý, bảo trì đường bộ 
 
 1. Nguồn tài chính để quản lý, bảo trì hệ thống quốc lộ và đường địa phương được bảo đảm từ quỹ bảo trì đường bộ.
@@ -891,10 +1348,30 @@ b) Các nguồn thu liên quan đến sử dụng đường bộ và các nguồ
 
 3. Chính phủ quy định cụ thể việc lập, quản lý và sử dụng quỹ bảo trì đường bộ ở trung ương và địa phương.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 50. Xây dựng đoạn đường giao nhau cùng mức giữa đường bộ với đường sắt"
+}
+Content:
 Điều 50. Xây dựng đoạn đường giao nhau cùng mức giữa đường bộ với đường sắt
 
 Việc xây dựng đoạn đường giao nhau cùng mức giữa đường bộ với đường sắt phải được cơ quan nhà nước có thẩm quyền cho phép; có thiết kế bảo đảm tiêu chuẩn kỹ thuật và điều kiện an toàn giao thông được cơ quan nhà nước có thẩm quyền phê duyệt theo quy định của Bộ trưởng Bộ Giao thông vận tải.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 51. Bến xe, bãi đỗ xe, trạm dừng nghỉ, trạm kiểm tra tải trọng xe, trạm thu phí đường bộ"
+}
+Content:
 Điều 51. Bến xe, bãi đỗ xe, trạm dừng nghỉ, trạm kiểm tra tải trọng xe, trạm thu phí đường bộ
 
 1. Trong đô thị, khi xây dựng trụ sở cơ quan, trường học, bệnh viện, trung tâm thương mại - dịch vụ, văn hóa và khu dân cư phải xây dựng đủ nơi đỗ xe phù hợp với quy mô của công trình. 
@@ -909,6 +1386,16 @@ Trường hợp cần thiết, để bảo vệ kết cấu hạ tầng giao th�
 
 5. Bộ trưởng Bộ Giao thông vận tải quy định về quy chuẩn kỹ thuật bến xe, bãi đỗ xe, trạm dừng nghỉ, trạm thu phí, trạm kiểm tra tải trọng xe; quy định về tổ chức, hoạt động của trạm thu phí, trạm kiểm tra tải trọng xe.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương III KẾT CẤU HẠ TẦNG GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 52. Bảo vệ kết cấu hạ tầng giao thông đường bộ"
+}
+Content:
 Điều 52. Bảo vệ kết cấu hạ tầng giao thông đường bộ 
 
 1. Bảo vệ kết cấu hạ tầng giao thông đường bộ gồm hoạt động bảo đảm an toàn và tuổi thọ của công trình đường bộ, biện pháp phòng ngừa, ngăn chặn và xử lý hành vi xâm phạm kết cấu hạ tầng giao thông đường bộ. 
@@ -931,12 +1418,18 @@ d) Bộ, cơ quan ngang bộ trong phạm vi nhiệm vụ, quyền hạn của m
 
 đ) Chính phủ quy định việc phối hợp giữa các bộ, cơ quan ngang bộ, Ủy ban nhân dân về bảo vệ kết cấu hạ tầng giao thông đường bộ.
 
-5. Người nào phát hiện công trình đường bộ bị hư hỏng hoặc bị xâm hại, hành lang an toàn đường bộ bị lấn chiếm phải kịp thời báo cho Uỷ ban nhân dân, cơ quan quản lý đường bộ hoặc cơ quan công an nơi gần nhất để xử lý; trường hợp cần thiết có biện pháp báo hiệu ngay cho người tham gia giao thông biết. Khi nhận được tin báo, cơ quan có trách nhiệm phải nhanh chóng thực hiện các biện pháp khắc phục để bảo đảm giao thông thông suốt, an toàn. 
+5. Người nào phát hiện công trình đường bộ bị hư hỏng hoặc bị xâm hại, hành lang an toàn đường bộ bị lấn chiếm phải kịp thời báo cho Uỷ ban nhân dân, cơ quan quản lý đường bộ hoặc cơ quan công an nơi gần nhất để xử lý; trường hợp cần thiết có biện pháp báo hiệu ngay cho người tham gia giao thông biết. Khi nhận được tin báo, cơ quan có trách nhiệm phải nhanh chóng thực hiện các biện pháp khắc phục để bảo đảm giao thông thông suốt, an toàn.
 
-CHƯƠNG IV
-
-PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ
-
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương IV PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 53. Điều kiện tham gia giao thông của xe cơ giới"
+}
+Content:
 Điều 53. Điều kiện tham gia giao thông của xe cơ giới
 
 1. Xe ô tô đúng kiểu loại được phép tham gia giao thông phải bảo đảm các quy định về chất lượng, an toàn kỹ thuật và bảo vệ môi trường sau đây:
@@ -969,12 +1462,32 @@ k) Các kết cấu phải đủ độ bền và bảo đảm tính năng vận 
 
 5. Bộ trưởng Bộ Giao thông vận tải quy định về chất lượng an toàn kỹ thuật và bảo vệ môi trường của xe cơ giới được phép tham gia giao thông, trừ xe cơ giới của quân đội, công an sử dụng vào mục đích quốc phòng, an ninh.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương IV PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 54. Cấp, thu hồi đăng ký và biển số xe cơ giới"
+}
+Content:
 Điều 54. Cấp, thu hồi đăng ký và biển số xe cơ giới
 
 1. Xe cơ giới có nguồn gốc hợp pháp, bảo đảm tiêu chuẩn chất lượng, an toàn kỹ thuật và bảo vệ môi trường theo quy định của Luật này được cơ quan nhà nước có thẩm quyền cấp đăng ký và biển số.
 
 2. Bộ trưởng Bộ Công an quy định và tổ chức cấp, thu hồi đăng ký, biển số các loại xe cơ giới; Bộ trưởng Bộ Quốc phòng quy định và tổ chức cấp, thu hồi đăng ký, biển số các loại xe cơ giới của quân đội sử dụng vào mục đích quốc phòng.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương IV PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 55. Bảo đảm quy định về chất lượng an toàn kỹ thuật và bảo vệ môi trường của xe cơ giới tham gia giao thông đường bộ"
+}
+Content:
 Điều 55. Bảo đảm quy định về chất lượng an toàn kỹ thuật và bảo vệ môi trường của xe cơ giới tham gia giao thông đường bộ 
 
 1. Việc sản xuất, lắp ráp, cải tạo, sửa chữa, bảo dưỡng và nhập khẩu xe cơ giới tham gia giao thông đường bộ phải tuân theo quy định về chất lượng an toàn kỹ thuật và bảo vệ môi trường. Không được cải tạo các xe ô tô khác thành xe ô tô chở khách.
@@ -989,12 +1502,32 @@ k) Các kết cấu phải đủ độ bền và bảo đảm tính năng vận 
 
 6. Bộ trưởng Bộ Giao thông vận tải quy định điều kiện, tiêu chuẩn và cấp giấy phép cho cơ sở đăng kiểm xe cơ giới; quy định và tổ chức thực hiện kiểm định xe cơ giới. Bộ trưởng Bộ Quốc phòng, Bộ trưởng Bộ Công an quy định và tổ chức kiểm định xe cơ giới của quân đội, công an sử dụng vào mục đích quốc phòng, an ninh.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương IV PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 56. Điều kiện tham gia giao thông của xe thô sơ"
+}
+Content:
 Điều 56. Điều kiện tham gia giao thông của xe thô sơ
 
 1. Khi tham gia giao thông, xe thô sơ phải bảo đảm điều kiện an toàn giao thông đường bộ.
 
 2. Ủy ban nhân dân cấp tỉnh quy định cụ thể điều kiện, phạm vi hoạt động của xe thô sơ tại địa phương mình.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương IV PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 57. Điều kiện tham gia giao thông của xe máy chuyên dùng"
+}
+Content:
 Điều 57. Điều kiện tham gia giao thông của xe máy chuyên dùng
 
 1. Bảo đảm các quy định về chất lượng an toàn kỹ thuật và bảo vệ môi trường sau đây:
@@ -1021,10 +1554,16 @@ e) Bảo đảm khí thải, tiếng ồn theo quy chuẩn môi trường.
 
 6. Bộ trưởng Bộ Giao thông vận tải quy định cụ thể về chất lượng an toàn kỹ thuật và bảo vệ môi trường, cấp, thu hồi đăng ký, biển số; quy định danh mục xe máy chuyên dùng phải kiểm định và tổ chức việc kiểm định; Bộ trưởng Bộ Quốc phòng, Bộ trưởng Bộ Công an quy định và tổ chức việc cấp, thu hồi đăng ký, biển số và kiểm định xe máy chuyên dùng của quân đội, công an sử dụng vào mục đích quốc phòng, an ninh.
 
-Chương V
-
-NGƯỜI ĐIỀU KHIỂN PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ
-
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương V NGƯỜI ĐIỀU KHIỂN PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 58. Điều kiện của người lái xe tham gia giao thông"
+}
+Content:
 Điều 58. Điều kiện của người lái xe tham gia giao thông
 
 1. Người lái xe tham gia giao thông phải đủ độ tuổi, sức khoẻ quy định tại Điều 60 của Luật này và có giấy phép lái xe phù hợp với loại xe được phép điều khiển do cơ quan nhà nước có thẩm quyền cấp.
@@ -1041,6 +1580,16 @@ c) Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ mô
 
 d) Giấy chứng nhận bảo hiểm trách nhiệm dân sự của chủ xe cơ giới.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương V NGƯỜI ĐIỀU KHIỂN PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 59. Giấy phép lái xe"
+}
+Content:
 Điều 59. Giấy phép lái xe
 
 1. Căn cứ vào kiểu loại, công suất động cơ, tải trọng và công dụng của xe cơ giới, giấy phép lái xe được phân thành giấy phép lái xe không thời hạn và giấy phép lái xe có thời hạn.
@@ -1073,6 +1622,16 @@ g) Giấy phép lái xe hạng FB2, FD, FE cấp cho người lái xe đã có g
 
 5. Giấy phép lái xe có giá trị sử dụng trong phạm vi lãnh thổ Việt Nam và lãnh thổ của nước hoặc vùng lãnh thổ mà Việt Nam ký cam kết công nhận giấy phép lái xe của nhau.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương V NGƯỜI ĐIỀU KHIỂN PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 60. Tuổi, sức khỏe của người lái xe"
+}
+Content:
 Điều 60. Tuổi, sức khỏe của người lái xe
 
 1. Độ tuổi của người lái xe quy định như sau:
@@ -1091,6 +1650,16 @@ e) Tuổi tối đa của người lái xe ô tô chở người trên 30 chỗ 
 
 2. Người lái xe phải có sức khỏe phù hợp với loại xe, công dụng của xe. Bộ trưởng Bộ Y tế chủ trì, phối hợp với Bộ trưởng Bộ Giao thông vận tải quy định về tiêu chuẩn sức khỏe của người lái xe, việc khám sức khỏe định kỳ đối với người lái xe ô tô và quy định về cơ sở y tế khám sức khoẻ của người lái xe.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương V NGƯỜI ĐIỀU KHIỂN PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 61. Đào tạo lái xe, sát hạch để cấp giấy phép lái xe"
+}
+Content:
 Điều 61. Đào tạo lái xe, sát hạch để cấp giấy phép lái xe
 
 1. Cơ sở đào tạo lái xe là loại hình cơ sở dạy nghề, phải có đủ điều kiện về lớp học, sân tập lái, xe tập lái, đội ngũ giáo viên, giáo trình, giáo án và phải được giấy cấp phép theo quy định.
@@ -1125,6 +1694,16 @@ Trường hợp giấy phép lái xe có thời hạn, trước khi hết thời
 
 10. Bộ trưởng Bộ Giao thông vận tải quy định điều kiện, tiêu chuẩn và cấp giấy phép cho cơ sở đào tạo; quy định hình thức, nội dung, chương trình đào tạo; sát hạch và cấp, đổi, thu hồi giấy phép lái xe; Bộ trưởng Bộ Quốc phòng, Bộ trưởng Bộ Công an quy định về cơ sở đào tạo, tổ chức đào tạo, sát hạch và cấp, đổi, thu hồi giấy phép lái xe cho lực lượng quân đội, công an làm nhiệm vụ quốc phòng, an ninh.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương V NGƯỜI ĐIỀU KHIỂN PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 62. Điều kiện của người điều khiển xe máy chuyên dùng tham gia giao thông"
+}
+Content:
 Điều 62. Điều kiện của người điều khiển xe máy chuyên dùng tham gia giao thông
 
 1. Người điều khiển xe máy chuyên dùng tham gia giao thông phải đủ độ tuổi, sức khỏe phù hợp với ngành nghề lao động và có chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ, bằng hoặc chứng chỉ điều khiển xe máy chuyên dùng do cơ sở đào tạo người điều khiển xe máy chuyên dùng cấp.
@@ -1137,18 +1716,33 @@ b) Chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đư
 
 c) Giấy chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trường đối với xe máy chuyên dùng quy định tại Điều 57 của Luật này.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương V NGƯỜI ĐIỀU KHIỂN PHƯƠNG TIỆN THAM GIA GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 63. Điều kiện của người điều khiển xe thô sơ tham gia giao thông"
+}
+Content:
 Điều 63. Điều kiện của người điều khiển xe thô sơ tham gia giao thông 
 
 1. Có sức khỏe bảo đảm điều khiển xe an toàn. 
 
-2. Hiểu biết quy tắc giao thông đường bộ. 
+2. Hiểu biết quy tắc giao thông đường bộ.
 
-Chương VI
-
-VẬN TẢI ĐƯỜNG BỘ
-
-Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ
-
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+    "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+    "article": "Điều 64. Hoạt động vận tải đường bộ"
+}
+Content:
 Điều 64. Hoạt động vận tải đường bộ
 
 1. Hoạt động vận tải đường bộ gồm hoạt động vận tải không kinh doanh và hoạt động kinh doanh vận tải đường bộ. Kinh doanh vận tải đường bộ là ngành nghề kinh doanh có điều kiện theo quy định của pháp luật.
@@ -1157,12 +1751,34 @@ Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ
 
 3. Hoạt động vận tải đường bộ phải phù hợp với quy hoạch giao thông vận tải đường bộ và mạng lưới tuyến vận tải.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+    "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+    "article": "Điều 65. Thời gian làm việc của người lái xe ô tô"
+}
+Content:
 Điều 65. Thời gian làm việc của người lái xe ô tô
 
 1. Thời gian làm việc của người lái xe ô tô không được quá 10 giờ trong một ngày và không được lái xe liên tục quá 4 giờ. 
 
 2. Người vận tải và người lái xe ô tô chịu trách nhiệm thực hiện quy định tại khoản 1 Điều này.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+    "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+    "article": "Điều 66. Kinh doanh vận tải bằng xe ô tô"
+}
+Content:
 Điều 66. Kinh doanh vận tải bằng xe ô tô
 
 1. Kinh doanh vận tải hành khách bằng xe ô tô bao gồm:
@@ -1189,6 +1805,17 @@ d) Kinh doanh vận tải hàng nguy hiểm.
 
 3. Chính phủ quy định cụ thể về kinh doanh vận tải bằng xe ô tô.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+    "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+    "article": "Điều 67. Điều kiện kinh doanh vận tải bằng xe ô tô"
+}
+Content:
 Điều 67. Điều kiện kinh doanh vận tải bằng xe ô tô
 
 1. Doanh nghiệp, hợp tác xã, hộ kinh doanh hoạt động kinh doanh vận tải bằng xe ô tô phải có đủ các điều kiện sau đây:
@@ -1215,6 +1842,17 @@ c) Đăng ký tiêu chuẩn chất lượng dịch vụ vận tải hành khách
 
 4. Chính phủ quy định cụ thể điều kiện và việc cấp giấy phép kinh doanh vận tải bằng xe ô tô.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+    "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+    "article": "Điều 68. Vận tải hành khách bằng xe ô tô"
+}
+Content:
 Điều 68. Vận tải hành khách bằng xe ô tô
 
 1. Người vận tải, người lái xe khách phải chấp hành các quy định sau đây:
@@ -1231,6 +1869,17 @@ e) Không để hàng hóa trong khoang chở hành khách; có biện pháp gi�
 
 2. Bộ trưởng Bộ Giao thông vận tải quy định về tổ chức và quản lý hoạt động vận tải hành khách bằng xe ô tô.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+    "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+    "article": "Điều 69. Quyền và nghĩa vụ của người kinh doanh vận tải hành khách"
+}
+Content:
 Điều 69. Quyền và nghĩa vụ của người kinh doanh vận tải hành khách 
 
 1. Người kinh doanh vận tải hành khách có các quyền sau đây:
@@ -1253,6 +1902,17 @@ d) Bồi thường thiệt hại do người làm công, người đại diện 
 
 3. Bộ trưởng Bộ Tài chính chủ trì, phối hợp với Bộ trưởng Bộ Giao thông vận tải quy định về vé và chứng từ thu cước, phí vận tải hành khách.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+    "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+    "article": "Điều 70. Trách nhiệm của người lái xe và nhân viên phục vụ trên xe ô tô vận tải hành khách"
+}
+Content:
 Điều 70. Trách nhiệm của người lái xe và nhân viên phục vụ trên xe ô tô vận tải hành khách
 
 1. Kiểm tra các điều kiện bảo đảm an toàn của xe trước khi khởi hành.
@@ -1265,6 +1925,17 @@ d) Bồi thường thiệt hại do người làm công, người đại diện 
 
 5. Đóng cửa lên xuống của xe trước và trong khi xe chạy.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+    "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+    "article": "Điều 71. Quyền và nghĩa vụ của hành khách"
+}
+Content:
 Điều 71. Quyền và nghĩa vụ của hành khách
 
 1. Hành khách có các quyền sau đây:
@@ -1283,6 +1954,17 @@ b) Có mặt tại nơi xuất phát đúng thời gian đã thỏa thuận; ch�
 
 c) Không mang theo hành lý, hàng hóa mà pháp luật cấm lưu thông.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+    "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+    "article": "Điều 72. Vận tải hàng hóa bằng xe ô tô"
+}
+Content:
 Điều 72. Vận tải hàng hóa bằng xe ô tô
 
 1. Việc vận chuyển hàng hóa bằng xe ô tô phải chấp hành các quy định sau đây:
@@ -1299,6 +1981,17 @@ b) Chở người trong thùng xe, trừ trường hợp quy định tại kho�
 
 3. Bộ trưởng Bộ Giao thông vận tải quy định về tổ chức và quản lý hoạt động vận tải hàng hóa bằng xe ô tô.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+    "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+    "article": "Điều 73. Quyền và nghĩa vụ của người kinh doanh vận tải hàng hóa"
+}
+Content:
 Điều 73. Quyền và nghĩa vụ của người kinh doanh vận tải hàng hóa
 
 1. Người kinh doanh vận tải hàng hóa có các quyền sau đây:
@@ -1325,6 +2018,17 @@ d) Bồi thường thiệt hại do người làm công, người đại diện 
 
 3. Chính phủ quy định giới hạn trách nhiệm của người kinh doanh vận tải hàng hóa.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+    "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+    "article": "Điều 74. Quyền và nghĩa vụ của người thuê vận tải hàng hóa"
+}
+Content:
 Điều 74. Quyền và nghĩa vụ của người thuê vận tải hàng hóa
 
 1. Người thuê vận tải hàng hóa có các quyền sau đây:
@@ -1343,6 +2047,17 @@ b) Thanh toán đủ cước, phí vận tải và chi phí phát sinh cho ngư�
 
 c) Cử người áp tải hàng hóa trong quá trình vận tải đối với loại hàng hóa bắt buộc phải có người áp tải.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+    "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+    "article": "Điều 75. Quyền và nghĩa vụ của người nhận hàng"
+}
+Content:
 Điều 75. Quyền và nghĩa vụ của người nhận hàng
 
 1. Người nhận hàng có các quyền sau đây:
@@ -1361,6 +2076,17 @@ a) Nhận hàng hóa đúng thời gian, địa điểm đã thỏa thuận; xu�
 
 b) Thanh toán chi phí phát sinh do nhận hàng chậm.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+    "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+    "article": "Điều 76. Vận chuyển hàng siêu trường, siêu trọng"
+}
+Content:
 Điều 76. Vận chuyển hàng siêu trường, siêu trọng
 
 1. Hàng siêu trường, siêu trọng là hàng có kích thước hoặc trọng lượng vượt quá giới hạn quy định nhưng không thể tháo rời ra được.
@@ -1371,6 +2097,17 @@ b) Thanh toán chi phí phát sinh do nhận hàng chậm.
 
 4. Bộ trưởng Bộ Giao thông vận tải quy định cụ thể về vận chuyển hàng siêu trường, siêu trọng.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+    "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+    "article": "Điều 77. Vận chuyển động vật sống"
+}
+Content:
 Điều 77. Vận chuyển động vật sống
 
 1. Tùy theo loại động vật sống, người kinh doanh vận tải yêu cầu người thuê vận tải bố trí người áp tải để chăm sóc trong quá trình vận tải.
@@ -1379,6 +2116,17 @@ b) Thanh toán chi phí phát sinh do nhận hàng chậm.
 
 3. Việc vận chuyển động vật sống trên đường phải tuân theo quy định của pháp luật về vệ sinh, phòng dịch và bảo vệ môi trường.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+    "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+    "article": "Điều 78. Vận chuyển hàng nguy hiểm"
+}
+Content:
 Điều 78. Vận chuyển hàng nguy hiểm
 
 1. Xe vận chuyển hàng nguy hiểm phải có giấy phép do cơ quan nhà nước có thẩm quyền cấp.
@@ -1387,6 +2135,17 @@ b) Thanh toán chi phí phát sinh do nhận hàng chậm.
 
 3. Chính phủ quy định Danh mục hàng nguy hiểm, vận chuyển hàng nguy hiểm và thẩm quyền cấp giấy phép vận chuyển hàng nguy hiểm.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+    "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+    "article": "Điều 79. Hoạt động vận tải đường bộ trong đô thị"
+}
+Content:
 Điều 79. Hoạt động vận tải đường bộ trong đô thị
 
 1. Xe buýt phải chạy đúng tuyến, đúng lịch trình và dừng, đỗ đúng nơi quy định.
@@ -1399,6 +2158,17 @@ b) Thanh toán chi phí phát sinh do nhận hàng chậm.
 
 5. Ủy ban nhân dân cấp tỉnh quy định cụ thể về hoạt động vận tải đường bộ trong đô thị và tỷ lệ phương tiện vận tải hành khách đáp ứng nhu cầu đi lại của người khuyết tật.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+    "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+    "article": "Điều 80. Vận chuyển hành khách, hàng hóa bằng xe thô sơ, xe gắn máy, xe mô tô hai bánh, xe mô tô ba bánh và các loại xe tương tự"
+}
+Content:
 Điều 80. Vận chuyển hành khách, hàng hóa bằng xe thô sơ, xe gắn máy, xe mô tô hai bánh, xe mô tô ba bánh và các loại xe tương tự
 
 1. Việc sử dụng xe thô sơ, xe gắn máy, xe mô tô hai bánh, xe mô tô ba bánh và các loại xe tương tự để vận chuyển hành khách, hàng hóa phải theo đúng quy định về trật tự, an toàn giao thông.
@@ -1407,20 +2177,51 @@ b) Thanh toán chi phí phát sinh do nhận hàng chậm.
 
 3. Căn cứ quy định của Bộ trưởng Bộ Giao thông vận tải, Ủy ban nhân dân cấp tỉnh quy định cụ thể việc tổ chức thực hiện tại địa phương.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+    "section": "Mục 1. HOẠT ĐỘNG VẬN TẢI ĐƯỜNG BỘ",
+    "article": "Điều 81. Vận tải đa phương thức"
+}
+Content:
 Điều 81. Vận tải đa phương thức
 
 1. Vận tải đa phương thức quy định trong Luật này là việc vận chuyển hàng hóa từ địa điểm nhận hàng đến địa điểm trả hàng cho người nhận hàng bằng ít nhất hai phương thức vận tải, trong đó có phương thức vận tải bằng đường bộ trên cơ sở một hợp đồng vận tải đa phương thức.
 
 2. Chính phủ quy định cụ thể về vận tải đa phương thức.
 
-Mục 2. DỊCH VỤ HỖ TRỢ VẬN TẢI ĐƯỜNG BỘ
-
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+    "section": "Mục 2. DỊCH VỤ HỖ TRỢ VẬN TẢI ĐƯỜNG BỘ",
+    "article": "Điều 82. Dịch vụ hỗ trợ vận tải đường bộ"
+}
+Content:
 Điều 82. Dịch vụ hỗ trợ vận tải đường bộ
 
 1. Dịch vụ hỗ trợ vận tải đường bộ gồm dịch vụ tại bến xe, bãi đỗ xe, trạm dừng nghỉ, đại lý vận tải, đại lý bán vé, dịch vụ thu gom hàng, dịch vụ chuyển tải, dịch vụ kho hàng, dịch vụ cứu hộ vận tải đường bộ. 
 
 2. Bộ trưởng Bộ Giao thông vận tải quy định cụ thể về dịch vụ hỗ trợ vận tải đường bộ.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VI VẬN TẢI ĐƯỜNG BỘ",
+    "section": "Mục 2. DỊCH VỤ HỖ TRỢ VẬN TẢI ĐƯỜNG BỘ",
+    "article": "Điều 83. Tổ chức hoạt động của bến xe ô tô, bãi đỗ xe, trạm dừng nghỉ"
+}
+Content:
 Điều 83. Tổ chức hoạt động của bến xe ô tô, bãi đỗ xe, trạm dừng nghỉ
 
 1. Hoạt động của bến xe ô tô khách, bến xe ô tô hàng, bãi đỗ xe, trạm dừng nghỉ phải bảo đảm trật tự, an toàn, vệ sinh môi trường, phòng, chống cháy nổ và chịu sự quản lý của cơ quan quản lý nhà nước có thẩm quyền ở địa phương.
@@ -1435,10 +2236,16 @@ Mục 2. DỊCH VỤ HỖ TRỢ VẬN TẢI ĐƯỜNG BỘ
 
 6. Ủy ban nhân dân cấp tỉnh căn cứ vào loại bến xe ô tô để quy định giá dịch vụ xe ra, vào bến xe ô tô.
 
-Chương VII
-
-QUẢN LÝ NHÀ NƯỚC VỀ GIAO THÔNG ĐƯỜNG BỘ
-
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VII QUẢN LÝ NHÀ NƯỚC VỀ GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 84. Nội dung quản lý nhà nước về giao thông đường bộ"
+}
+Content:
 Điều 84. Nội dung quản lý nhà nước về giao thông đường bộ 
 
 1. Xây dựng quy hoạch, kế hoạch và chính sách phát triển giao thông đường bộ; xây dựng và chỉ đạo thực hiện chương trình quốc gia về an toàn giao thông đường bộ. 
@@ -1459,8 +2266,18 @@ QUẢN LÝ NHÀ NƯỚC VỀ GIAO THÔNG ĐƯỜNG BỘ
 
 9. Kiểm tra, thanh tra, giải quyết khiếu nại, tố cáo; xử lý vi phạm pháp luật về giao thông đường bộ. 
 
-10. Hợp tác quốc tế về giao thông đường bộ. 
+10. Hợp tác quốc tế về giao thông đường bộ.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VII QUẢN LÝ NHÀ NƯỚC VỀ GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 85. Trách nhiệm quản lý nhà nước về giao thông đường bộ"
+}
+Content:
 Điều 85. Trách nhiệm quản lý nhà nước về giao thông đường bộ
 
 1. Chính phủ thống nhất quản lý nhà nước về giao thông đường bộ. 
@@ -1477,6 +2294,16 @@ Bộ Công an, Bộ Giao thông vận tải có trách nhiệm phối hợp tron
 
 6. Ủy ban nhân dân các cấp trong phạm vi nhiệm vụ, quyền hạn của mình tổ chức thực hiện quản lý nhà nước về giao thông đường bộ theo quy định của Luật này và các quy định khác của pháp luật có liên quan trong phạm vi địa phương.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VII QUẢN LÝ NHÀ NƯỚC VỀ GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 86. Thanh tra đường bộ"
+}
+Content:
 Điều 86. Thanh tra đường bộ
 
 1. Thanh tra đường bộ thực hiện chức năng thanh tra chuyên ngành về giao thông đường bộ.
@@ -1495,6 +2322,16 @@ d) Thực hiện nhiệm vụ và quyền hạn khác theo quy định của ph�
 
 Bộ trưởng Bộ Giao thông vận tải quy định cụ thể nhiệm vụ, quyền hạn của Thanh tra đường bộ.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VII QUẢN LÝ NHÀ NƯỚC VỀ GIAO THÔNG ĐƯỜNG BỘ",
+    "article": "Điều 87. Tuần tra, kiểm soát của cảnh sát giao thông đường bộ"
+}
+Content:
 Điều 87. Tuần tra, kiểm soát của cảnh sát giao thông đường bộ 
 
 1. Cảnh sát giao thông đường bộ thực hiện việc tuần tra, kiểm soát để kiểm soát người và phương tiện tham gia giao thông đường bộ; xử lý vi phạm pháp luật về giao thông đường bộ đối với người và phương tiện tham gia giao thông đường bộ và chịu trách nhiệm trước pháp luật về quyết định của mình; phối hợp với cơ quan quản lý đường bộ phát hiện, ngăn chặn hành vi vi phạm quy định bảo vệ công trình đường bộ và hành lang an toàn đường bộ.
@@ -1503,16 +2340,32 @@ Bộ trưởng Bộ Giao thông vận tải quy định cụ thể nhiệm vụ,
 
 3. Chính phủ quy định việc huy động các lực lượng cảnh sát khác và công an xã phối hợp với cảnh sát giao thông đường bộ tham gia tuần tra, kiểm soát trật tự, an toàn giao thông đường bộ trong trường hợp cần thiết.
 
-Chương VIII
-
-ĐIỀU KHOẢN THI HÀNH
-
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VIII ĐIỀU KHOẢN THI HÀNH",
+    "article": "Điều 88. Hiệu lực thi hành"
+}
+Content:
 Điều 88. Hiệu lực thi hành
 
 1. Luật này có hiệu lực thi hành từ ngày 01 tháng 7 năm 2009.
 
 2. Luật này thay thế Luật giao thông đường bộ ngày 29 tháng 6 năm 2001.
 
+Metadata: {
+    "source": "23_2008_QH12_82203.docx",
+    "type": "Luật",
+    "title": "LUẬT GIAO THÔNG ĐƯỜNG BỘ",
+    "number": "23/2008/QH12",
+    "issued_date": "13/11/2008",
+    "chapter": "Chương VIII ĐIỀU KHOẢN THI HÀNH",
+    "article": "Điều 89. Quy định chi tiết và hướng dẫn thi hành"
+}
+Content:
 Điều 89. Quy định chi tiết và hướng dẫn thi hành
 
 Chính phủ và cơ quan có thẩm quyền quy định chi tiết và hướng dẫn thi hành các điều, khoản được giao trong Luật; hướng dẫn những nội dung cần thiết khác của Luật này để đáp ứng yêu cầu quản lý nhà nước. 
@@ -1528,4 +2381,5 @@ CHỦ TỊCH QUỐC HỘI
 
 
 
-Nguyễn Phú Trọng' metadata={'source': '23_2008_QH12_82203.docx', 'type': 'Luật', 'title': 'LUẬT GIAO THÔNG ĐƯỜNG BỘ', 'number': '23/2008/QH12', 'issued_date': '13/11/2008'}
+Nguyễn Phú Trọng
+
