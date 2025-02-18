@@ -1,5 +1,5 @@
 import os
-from langchain_qdrant import QdrantVectorStore
+from langchain_qdrant import QdrantVectorStore, RetrievalMode
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from qdrant_client import QdrantClient
 from qdrant_client.http.models import Distance, VectorParams
@@ -50,10 +50,11 @@ class QdrantDatabase:
         vector_store = QdrantVectorStore(
             client=self.client,
             collection_name=self.collection_name,
-            embedding=self.embedding_model
+            embedding=self.embedding_model,
+            # retrieval_mode=RetrievalMode.HYBRID,
         )
         
-        ids = [str(uuid4()) for _ in range(len(documents))]
+        uuids = [str(uuid4()) for _ in range(len(documents))]
         
-        vector_store.add_documents(documents=documents, ids=ids)
+        vector_store.add_documents(documents=documents, ids=uuids)
     
