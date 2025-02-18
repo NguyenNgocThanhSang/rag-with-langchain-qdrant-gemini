@@ -12,7 +12,7 @@ class EntityExtractor:
         self.llm = GoogleGenerativeAI(
             model=os.getenv('MODEL_NAME'),
             api_key=os.getenv('GEMINI_API_KEY'),
-        ),
+        )
         self.prompt_template = PromptTemplate(
             input_variables=['query'],
             template="""
@@ -38,8 +38,10 @@ class EntityExtractor:
         keywords = response_text.strip().split(",")
         return [keyword.strip() for keyword in keywords]
 
+# # Test    
+# if __name__ == "__main__":
+#     extractor = EntityExtractor()
+#     query = "Luật Giao thông đường bộ quy định thế nào về việc sử dụng làn đường?"
+#     print(extractor.extract_entities(query))
     
-if __name__ == "__main__":
-    extractor = EntityExtractor()
-    query = "Luật Giao thông đường bộ quy định thế nào về việc sử dụng làn đường?"
-    print(extractor.extract_entities(query))
+    
