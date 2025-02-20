@@ -65,6 +65,7 @@ class Retriever:
                 ]
             }
             })
+        
         headers = {
         'Content-Type': 'application/json',
         'Authorization': f'Bearer {os.getenv('QDRANT_API_KEY')} '

@@ -2,8 +2,11 @@ from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAI
 from langchain.prompts import PromptTemplate
 from typing import List
 import os
+from rich import print
+from rich import traceback
 from dotenv import load_dotenv
 
+traceback.install()
 load_dotenv()
 
 class EntityExtractor:
@@ -27,7 +30,9 @@ class EntityExtractor:
         Trích xuất thực thể (keywords) từ truy vấn người dùng. 
         """
         prompt_text = self.prompt_template.format(query=query)
+        print(prompt_text)
         response = self.llm.invoke(prompt_text)
+        print(response)
         
         # Kiểm tra nếu response có content
         if hasattr(response, "content"):
@@ -41,7 +46,7 @@ class EntityExtractor:
 # Test    
 if __name__ == "__main__":
     extractor = EntityExtractor()
-    query = "Luật Giao thông đường bộ quy định thế nào về việc sử dụng làn đường?"
-    print(extractor.extract_entities(query))
+    query = "Những điểm mới trong Quyết định 776/QĐ-UBND năm 2016 có ảnh hưởng như thế nào đến quản lý tài nguyên tại địa phương?"
+    print(extractor.extract_entities(query.lower()))
     
     
