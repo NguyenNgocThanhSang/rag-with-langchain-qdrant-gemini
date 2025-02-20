@@ -4,7 +4,12 @@ from qdrant_client import models
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from typing import List, Dict
 from dotenv import load_dotenv
+import requests
+import json
+from rich import print
+from rich import traceback
 
+traceback.install()
 load_dotenv()
 
 class Retriever:
@@ -27,40 +32,57 @@ class Retriever:
             metadata_payload_key='metadata'
         )
 
-    def keyword_search(self, query: str, keywords: List[str], top_k: int = 20) -> List[Dict]:
+    def keyword_search(self, keywords: List[str], top_k: int = 20) -> List[Dict]:
         """Tìm kiếm chỉ với keyword filtering trên page_content và metadata"""
-        keyword_filter = models.Filter(
-            should=[
-                models.FieldCondition(
-                    key='metadata.article',
-                    match=models.MatchValue(value="Điều 79"))
-                # ) for keyword in keywords
-            ] 
-            # [
-            #     models.FieldCondition(
-            #         key='metadata',
-            #         match=models.MatchValue(value=keyword)
-            #     ) for keyword in keywords
-            # ],
-        )
-        
-        # print(keyword_filter)
+        print(keywords)
+        # keyword_filter = models.Filter(
+        #     should = [
+        #         models.FieldCondition(
+        #             key='metadata.article',
+        #             match=models.MatchAny(any=keywords)
+        #         )
+        #     ]
+        # )
 
-        # Thực hiện tìm kiếm theo keyword
-        keyword_results = self.vector_store.similarity_search_with_score(
-            query="",  # Không cần query, chỉ sử dụng filter
-            k=top_k,
-            filter=
-        )
+        # # Thực hiện tìm kiếm theo keyword
+        # keyword_results = self.vector_store.similarity_search_with_score(
+        #     query="",  # Không cần query, chỉ sử dụng filter
+        #     k=top_k,
+        #     filter=keyword_filter
+        # )
+        url = "https://218e5ea7-2ee3-4dd3-bf72-fb2511c22934.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/legal_docs/points/scroll"
+
+        payload = json.dumps({
+            "limit": int(top_k),
+            "filter": {
+                "should": [
+                {
+                    "key": "metadata.article",
+                    "match": {
+                    "any": keywords
+                    }
+                }
+                ]
+            }
+            })
+        headers = {
+        'Content-Type': 'application/json',
+        'Authorization': f'Bearer {os.getenv('QDRANT_API_KEY')} '
+        }
+
+        response = requests.request("POST", url, headers=headers, data=payload)
+
+        result = response.json()
+        print(result)
 
         # In kết quả debug nếu cần
         return [
             {
-                'text': doc.page_content,
-                'metadata': doc.metadata,
-                'score': score
+                'text': doc["payload"]["page_content"],
+                'metadata': doc["payload"]["metadata"],
+                # 'score': score
             }
-            for doc, score in keyword_results
+            for doc in result["result"]["points"]
         ]
 
     def semantic_search(self, query: str, top_k: int = 4) -> List[Dict]:
@@ -93,8 +115,8 @@ if __name__ == "__main__":
     retriever = Retriever()
 
     query = "Điều 79. Hoạt động vận tải đường bộ trong đô thị"    
-    keywords = ['Điều 79', 'Hoạt động vận tải đường bộ trong đô thị', 'Xe buýt phải chạy đúng tuyến', 'Xe vệ sinh môi trường']
+    keywords = ['điều 79', 'Hoạt động vận tải đường bộ trong đô thị', 'Xe buýt phải chạy đúng tuyến', 'Xe vệ sinh môi trường']
 
-    print("Keyword Search:", retriever.keyword_search(query, keywords), '\n')
+    print("Keyword Search:", retriever.keyword_search(keywords), '\n')
     # print("Semantic Search:", retriever.semantic_search(query), '\n')
     # print("Hybrid Search:", retriever.hybrid_search(query, keywords))

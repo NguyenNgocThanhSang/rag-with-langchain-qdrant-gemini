@@ -40,8 +40,8 @@ class DocumentLoader:
         # thêm trường type và title vào metadata
         if type_title_match:
             self.metadata.update({
-                'type': type_title_match.group(1).capitalize(),
-                'title': f"{type_title_match.group(1)} {type_title_match.group(2).strip()}"
+                'type': type_title_match.group(1).lower(),
+                'title': f"{type_title_match.group(1).lower()} {type_title_match.group(2).strip().lower()}"
             })
             
         # Lấy số hiệu văn bản
@@ -74,17 +74,36 @@ class DocumentLoader:
     
     def _chunk_by_chapter(self, document: Document) -> list[Document]:
         '''Chia tài liệu theo chương'''
+        chapter_docs = []
         # Biên dịch mẫu regex thành mẫu pattern chương
         chapter_pattern = re.compile(r'(Chương\s+[IVXLCDM]+\s+[^\n]+)\n+(.*?)(?=\nChương\s+[IVXLCDM]+|$)', re.DOTALL)
         # Tìm nội dung các đoạn theo chương dựa trên pattern 
         chapters = chapter_pattern.findall(document.page_content)
         
-        return [
-            Document(
-                page_content=content.strip(),
-                metadata={**document.metadata, 'chapter': title.replace('\n\n', ' ').strip()}
-            ) for title, content in chapters 
-        ]
+        for title, content in chapters:
+            # Lowercase và tách tiêu đề chương
+            title = title.lower().strip() # chuyển thành chữ thường
+            
+            # Sử dụng regex để tách số chương và tên chương
+            title_pattern = re.compile(r'(chương\s+[ivxlcdm]+)(?:\s+(.*))?')
+            title_match = title_pattern.match(title)
+            
+            if title_match:
+                chapter_number = title_match.group(1) # vd: "chương i"
+                chapter_title =title_match.group(2).strip() if title_match.group(2) else "" # vd: quy định chung
+                chapter_list = [chapter_number, chapter_title]
+            else:
+                chapter_list =[]
+                
+            # Tạo Document cho từng chương
+            chapter_docs.append(
+                Document(
+                    page_content=content.strip(),
+                    metadata={**document.metadata, 'chapter': chapter_list}
+                )
+            )
+                
+        return chapter_docs
         
     def _chunk_by_sections(self, chapter_docs: list[Document]) -> list[Document]:
         '''Chia tài liệu chương theo mục (nếu có)'''
@@ -95,12 +114,28 @@ class DocumentLoader:
             matches = section_pattern.findall(chapter_doc.page_content)
             
             if matches:
-                section_docs.extend([
-                    Document(
-                        page_content=content.strip(),
-                        metadata={**chapter_doc.metadata, 'section': title.strip()}
-                    ) for title, content in matches
-                ]) 
+                for title, content in matches:
+                    # Lowercase và tách tiêu đề mục
+                    title = title.lower().strip() # chuyển thành chữ thường
+                    
+                    # Sử dụng regex để tách số mục và tên mục
+                    title_pattern = re.compile(r'(mục \d+)(?:\.\s(.*))?')
+                    title_match = title_pattern.match(title)
+                    
+                    if title_match:
+                        section_number = title_match.group(1)
+                        section_title = title_match.group(2) if title_match.group(2) else ""
+                        section_list = [section_number, section_title]
+                    else:
+                        section_list = []
+                        
+                    # Tạo Document cho từng mục
+                    section_docs.append(
+                        Document(
+                            page_content=content.strip(),
+                            metadata={**chapter_doc.metadata, 'section': section_list}
+                        )
+                    )
             else:
                 section_docs.append(chapter_doc)
                 
@@ -114,12 +149,25 @@ class DocumentLoader:
         for document in documents:
             matches = article_pattern.findall(document.page_content)
             
-            article_docs.extend([
-                Document(
-                    page_content=article.strip(),
-                    metadata={**document.metadata, 'article': article.split('\n')[0].strip()}
-                ) for article in matches
-            ])
+            for article in matches:
+                # Tách theo tiêu đề điều luật
+                title_pattern = re.compile(r'(Điều \d+)\.\s*(.+)')
+                title_match = title_pattern.match(article.split('\n')[0].strip())
+                
+                if title_match:
+                    article_number = title_match.group(1).lower()
+                    article_title = title_match.group(2).lower()
+                    article_list = [article_number, article_title]
+                else:
+                    article_list = []
+
+                # Tạo document cho từng điều luật
+                article_docs.append(
+                    Document(
+                        page_content=article.strip(),
+                        metadata={**document.metadata, 'article': article_list}
+                    )
+                )
                 
         return article_docs
     

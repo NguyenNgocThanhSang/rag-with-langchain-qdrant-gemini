@@ -38,10 +38,10 @@ class EntityExtractor:
         keywords = response_text.strip().split(",")
         return [keyword.strip() for keyword in keywords]
 
-# # Test    
-# if __name__ == "__main__":
-#     extractor = EntityExtractor()
-#     query = "Luật Giao thông đường bộ quy định thế nào về việc sử dụng làn đường?"
-#     print(extractor.extract_entities(query))
+# Test    
+if __name__ == "__main__":
+    extractor = EntityExtractor()
+    query = "Luật Giao thông đường bộ quy định thế nào về việc sử dụng làn đường?"
+    print(extractor.extract_entities(query))
     
     
