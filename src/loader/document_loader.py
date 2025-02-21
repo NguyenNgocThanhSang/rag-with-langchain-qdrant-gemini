@@ -3,8 +3,8 @@ from langchain_community.document_loaders import Docx2txtLoader
 import re
 import os
 import json
-from dotenv import load_dotenv
 from typing import List
+from underthesea import word_tokenize
 
 class DocumentLoader:
     '''Một lớp để xử lý các tài liệu, trích xuất metadata và chia văn bản thành các phần theo cấu trúc'''
@@ -39,9 +39,15 @@ class DocumentLoader:
         
         # thêm trường type và title vào metadata
         if type_title_match:
+            type = type_title_match.group(1).lower()
+            title = type_title_match.group(2).strip().lower()
             self.metadata.update({
-                'type': type_title_match.group(1).lower(),
-                'title': f"{type_title_match.group(1).lower()} {type_title_match.group(2).strip().lower()}"
+                'type': type,
+                'title': {
+                    'full': f"{type} {title}",
+                    'short': f"{title}",
+                    'segments': word_tokenize(f"{type} {title}")
+                }
             })
             
         # Lấy số hiệu văn bản
@@ -53,7 +59,26 @@ class DocumentLoader:
         
         # Thêm số hiệu văn bản vào metadata
         if number_match:
-            self.metadata['number'] = number_match.group(2)
+            number_str = number_match.group(2).lower()
+            pattern = r'(?P<code>\d+)/(?P<year>\d{4})/(?P<issuer>\w+)'
+            match = re.match(pattern=pattern, string=number_str)
+            if match:
+                self.metadata['number'] = {
+                    'full': number_str,
+                    'code': match.group('code'),
+                    'year': match.group('year'),
+                    'issuer': match.group('issuer')
+                }
+            else:
+                # Nếu không khớp với pattern thì chỉ lưu lại dưới dạng str
+                self.metadata['number'] = {
+                    'full': number_str,
+                    'code': None,
+                    'year': None,
+                    'issuer': None
+                }
+            
+            # self.metadata['number'] = number_match.group(2).lower()
         
         # lấy ngày ban hành
         issued_date_match = re.search(
@@ -63,7 +88,16 @@ class DocumentLoader:
         
         # Thêm ngày ban hành vào trong metadata
         if issued_date_match:
-            self.metadata['issued_date'] = f"{issued_date_match.group(2)}/{issued_date_match.group(3)}/{issued_date_match.group(4)}"
+            day = issued_date_match.group(2)
+            month = issued_date_match.group(3)
+            year = issued_date_match.group(4)
+            self.metadata['issued_date'] = {
+                'day': day,
+                'month': month,
+                'year': year,
+                'full': f"{day}/{month}/{year}" if day and month and year else None 
+            }
+            # self.metadata['issued_date'] = f"{issued_date_match.group(2)}/{issued_date_match.group(3)}/{issued_date_match.group(4)}"
         
     def load_and_split(self) -> List[Document]:
         '''Load tài liệu, trích xuất metadata và chia nhỏ theo chương, mục, điều luật'''

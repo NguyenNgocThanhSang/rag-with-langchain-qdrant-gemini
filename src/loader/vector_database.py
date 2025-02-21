@@ -7,6 +7,7 @@ from typing import List, Dict
 from langchain_core.documents import Document
 from uuid import uuid4
 from dotenv import load_dotenv
+import time
 
 load_dotenv()
 
@@ -24,7 +25,7 @@ class QdrantDatabase:
         )
         
         # Kiểm tra collection xem có chưa, nếu chưa có thì tạo mới
-        self._ensure_collection_exists()
+        # self._ensure_collection_exists()
         
     def _ensure_collection_exists(self):
         """Kiểm tra xem collection có chưa, chưa có thì tạo mới"""
@@ -46,7 +47,10 @@ class QdrantDatabase:
     def upload(self, documents: List[Document]):
         """Nhúng và lưa các đoạn chunk vào Qdrant"""
         # embeded_texts = self.embed_documents(texts=texts)
+        # Kiểm tra và tạo collection nếu chưa tồn tại
+        self._ensure_collection_exists()
         
+        # Tạo vector_store và upload Documents 
         vector_store = QdrantVectorStore(
             client=self.client,
             collection_name=self.collection_name,
@@ -55,6 +59,22 @@ class QdrantDatabase:
         )
         
         uuids = [str(uuid4()) for _ in range(len(documents))]
-        
         vector_store.add_documents(documents=documents, ids=uuids)
+        print("Upload tài liệu thành công")
     
+    def delete_collection(self):
+        '''Xóa toàn bộ collection'''
+        collections = self.client.get_collections()
+        
+        if self.collection_name in [collection.name for collection in collections.collections]:
+            self.client.delete_collection(collection_name=self.collection_name)
+            print(f'{self.collection_name} đã bị xóa')
+            # Đảm bảo collection đã bị xóa hoàn toàn
+            time.sleep(1)
+            collections = self.client.get_collections()
+            if self.collection_name not in [collection.name for collection in collections.collections]:
+                print(f"{self.collection_name} đã bị xóa hoàn toàn.")
+            else:
+                print(f"Lỗi: {self.collection_name} vẫn tồn tại sau khi xóa.")
+        else:
+            print(f'{self.collection_name} không tồn tại, không cần xóa')
