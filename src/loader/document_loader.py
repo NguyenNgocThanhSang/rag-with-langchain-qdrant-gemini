@@ -45,7 +45,6 @@ class DocumentLoader:
                 'type': type,
                 'title': {
                     'full': f"{type} {title}",
-                    'short': f"{title}",
                     'segments': word_tokenize(f"{type} {title}")
                 }
             })
@@ -213,14 +212,3 @@ class DocumentLoader:
                 f.write(f"Content:\n{doc.page_content}\n\n")
         print(f"Đã lưu các Document vào {output_path}")
 
-# file_path = os.path.join("../../documents", "23_2008_QH12_82203.docx")
-
-# loader = DocumentLoader(file_path=file_path)
-# documents = loader.load_and_split()
-
-# for document in documents:
-#     print(document.metadata)
-    
-# print(len(documents))
-
-# loader.save_to_txt(documents=documents, output_path='../logs/documents.txt')

@@ -2,6 +2,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAI
 from langchain.prompts import PromptTemplate
 from typing import List
 import os
+import json
 from rich import print
 from rich import traceback
 from dotenv import load_dotenv
@@ -24,6 +25,7 @@ class EntityExtractor:
             Trả về danh sách các thực thể quan trọng, cách nhau bằng dấu phẩy.
             """
         )
+        # self.schema=
         
     def extract_entities(self, query: str) -> List[str]:
         """

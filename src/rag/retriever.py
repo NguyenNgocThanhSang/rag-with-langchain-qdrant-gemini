@@ -35,56 +35,65 @@ class Retriever:
     def keyword_search(self, keywords: List[str], top_k: int = 20) -> List[Dict]:
         """Tìm kiếm chỉ với keyword filtering trên page_content và metadata"""
         print(keywords)
-        # keyword_filter = models.Filter(
-        #     should = [
-        #         models.FieldCondition(
-        #             key='metadata.article',
-        #             match=models.MatchAny(any=keywords)
-        #         )
-        #     ]
-        # )
+        keyword_filter = models.Filter(
+            should=[
+                models.FieldCondition(
+                    key='metadata.article',
+                    match=models.MatchText(text="giao thông vận tải đường bộ")
+                )
+            ]
+        )
 
-        # # Thực hiện tìm kiếm theo keyword
-        # keyword_results = self.vector_store.similarity_search_with_score(
-        #     query="",  # Không cần query, chỉ sử dụng filter
-        #     k=top_k,
-        #     filter=keyword_filter
-        # )
-        url = "https://218e5ea7-2ee3-4dd3-bf72-fb2511c22934.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/legal_docs/points/scroll"
-
-        payload = json.dumps({
-            "limit": int(top_k),
-            "filter": {
-                "should": [
-                {
-                    "key": "metadata.article",
-                    "match": {
-                    "any": keywords
-                    }
-                }
-                ]
-            }
-            })
+        # Thực hiện tìm kiếm theo keyword
+        keyword_results = self.vector_store.similarity_search_with_score(
+            query="",  # Không cần query, chỉ sử dụng filter
+            k=top_k,
+            filter=keyword_filter
+        )
         
-        headers = {
-        'Content-Type': 'application/json',
-        'Authorization': f'Bearer {os.getenv('QDRANT_API_KEY')} '
-        }
-
-        response = requests.request("POST", url, headers=headers, data=payload)
-
-        result = response.json()
-        print(result)
-
-        # In kết quả debug nếu cần
         return [
             {
-                'text': doc["payload"]["page_content"],
-                'metadata': doc["payload"]["metadata"],
-                # 'score': score
+                'text': doc.page_content,
+                'metadata': doc.metadata,
+                'score': score
             }
-            for doc in result["result"]["points"]
+            for doc, score in keyword_results
         ]
+        # url = "https://218e5ea7-2ee3-4dd3-bf72-fb2511c22934.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/legal_docs/points/scroll"
+
+        # payload = json.dumps({
+        #     "limit": int(top_k),
+        #     "filter": {
+        #         "should": [
+        #         {
+        #             "key": "metadata.article",
+        #             "match": {
+        #             "any": keywords
+        #             }
+        #         }
+        #         ]
+        #     }
+        #     })
+        
+        # headers = {
+        # 'Content-Type': 'application/json',
+        # 'Authorization': f'Bearer {os.getenv('QDRANT_API_KEY')} '
+        # }
+
+        # response = requests.request("POST", url, headers=headers, data=payload)
+
+        # result = response.json()
+        # print(result)
+
+        # # In kết quả debug nếu cần
+        # return [
+        #     {
+        #         'text': doc["payload"]["page_content"],
+        #         'metadata': doc["payload"]["metadata"],
+        #         # 'score': score
+        #     }
+        #     for doc in result["result"]["points"]
+        # ]
 
     def semantic_search(self, query: str, top_k: int = 4) -> List[Dict]:
         """Chạy semantic search thuần (không có keyword filtering)"""
