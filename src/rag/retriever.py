@@ -32,15 +32,32 @@ class Retriever:
             metadata_payload_key='metadata'
         )
 
-    def keyword_search(self, keywords: List[str], top_k: int = 20) -> List[Dict]:
-        """Tìm kiếm chỉ với keyword filtering trên page_content và metadata"""
+    def keyword_search(self, keywords: Dict, top_k: int = 5) -> List[Dict]:
+        """
+        Tìm kiếm chỉ với keyword filtering trên page_content và metadata 
+        (Tìm tất cả những chunk chứa nhiều keywords nhất)
+        """
         print(keywords)
+        
+        # Tạo danh sách điều kiện MatchText cho từng keyword
+        filter_conditions = [
+            models.FieldCondition(
+                key='page_content',
+                match=models.MatchText(text=keyword)
+            )
+            for keyword in keywords
+        ]
+        
         keyword_filter = models.Filter(
             should=[
                 models.FieldCondition(
-                    key='metadata.article',
-                    match=models.MatchText(text="giao thông vận tải đường bộ")
-                )
+                    key='metadata.issued_date',
+                    match=models.MatchText(text="")
+                ),
+                # models.FieldCondition(
+                #     key='metadata.article',
+                #     match=models.MatchText(text="đường bộ")
+                # )
             ]
         )
 
