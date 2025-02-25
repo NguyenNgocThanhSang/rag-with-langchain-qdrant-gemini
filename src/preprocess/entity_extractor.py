@@ -29,7 +29,7 @@ class EntityExtractor:
             - type: loại văn bản (str). (ví dụ: "luật", "quyết định", "thông tư", "nghị quyết"...)
             - title: tiêu đề văn bản (str). (ví dụ: "luật giao thông đường bộ)
             - number: số hiệu văn bản (str). (ví dụ: "01/2021/qđ-ubnd")
-            - issued_date: ngày ban hành (str). (ví dụ: 01/01/2025, 2025, 3/2025...)
+            - issued_date: thời gian ban hành (str). (ví dụ: 01/01/2025, 2025, 3/2025...)
             - keywords: danh sách các thưc thể quan trọng (List[str]). (ví dụ: ["giao thông", "đường bộ", "danh tính", "quyền lợi"])
             
             Lưu ý: trường nào không có thì cứ bỏ qua, chỉ lấy những thông tin cần thiết thôi.

@@ -4,6 +4,11 @@ from qdrant_client import models
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from typing import List, Dict
 from dotenv import load_dotenv
+import sys
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.join(current_dir, '..')
+sys.path.insert(0, parent_dir)
+from preprocess.entity_extractor import EntityExtractor
 import requests
 import json
 from rich import print
@@ -32,35 +37,48 @@ class Retriever:
             metadata_payload_key='metadata'
         )
 
-    def keyword_search(self, keywords: Dict, top_k: int = 5) -> List[Dict]:
+    def keyword_search(self, keywords: Dict, top_k: int = 10):
         """
         Tìm kiếm chỉ với keyword filtering trên page_content và metadata 
         (Tìm tất cả những chunk chứa nhiều keywords nhất)
         """
         print(keywords)
         
-        # Tạo danh sách điều kiện MatchText cho từng keyword
-        filter_conditions = [
-            models.FieldCondition(
-                key='page_content',
-                match=models.MatchText(text=keyword)
-            )
-            for keyword in keywords
-        ]
-        
         keyword_filter = models.Filter(
+            must=[
+                models.FieldCondition(
+                    key="metadata.type",
+                    match=models.MatchText(text=keywords['type'])  
+                ),
+                models.FieldCondition(
+                    key="metadata.title",
+                    match=models.MatchText(text=keywords['title'])
+                ),
+                models.FieldCondition(
+                    key="metadata.issued_date",
+                    match=models.MatchText(text=keywords['issued_date'])
+                ),
+                models.FieldCondition(
+                    key="metadata.chapter",
+                    match=models.MatchText(text=keywords['chapter'])
+                ),
+                models.FieldCondition(
+                    key="metadata.section",
+                    match=models.MatchText(text=keywords['section'])  
+                ),
+                models.FieldCondition(
+                    key="metadata.article",
+                    match=models.MatchText(text=keywords['article'])
+                )
+            ],
             should=[
                 models.FieldCondition(
-                    key='metadata.issued_date',
-                    match=models.MatchText(text="")
-                ),
-                # models.FieldCondition(
-                #     key='metadata.article',
-                #     match=models.MatchText(text="đường bộ")
-                # )
+                    key='page_content',
+                    match=models.MatchText(text=keywords)
+                ) for keywords in keywords['keywords']
             ]
         )
-
+        
         # Thực hiện tìm kiếm theo keyword
         keyword_results = self.vector_store.similarity_search_with_score(
             query="",  # Không cần query, chỉ sử dụng filter
@@ -76,43 +94,8 @@ class Retriever:
             }
             for doc, score in keyword_results
         ]
-        # url = "https://218e5ea7-2ee3-4dd3-bf72-fb2511c22934.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/legal_docs/points/scroll"
 
-        # payload = json.dumps({
-        #     "limit": int(top_k),
-        #     "filter": {
-        #         "should": [
-        #         {
-        #             "key": "metadata.article",
-        #             "match": {
-        #             "any": keywords
-        #             }
-        #         }
-        #         ]
-        #     }
-        #     })
-        
-        # headers = {
-        # 'Content-Type': 'application/json',
-        # 'Authorization': f'Bearer {os.getenv('QDRANT_API_KEY')} '
-        # }
-
-        # response = requests.request("POST", url, headers=headers, data=payload)
-
-        # result = response.json()
-        # print(result)
-
-        # # In kết quả debug nếu cần
-        # return [
-        #     {
-        #         'text': doc["payload"]["page_content"],
-        #         'metadata': doc["payload"]["metadata"],
-        #         # 'score': score
-        #     }
-        #     for doc in result["result"]["points"]
-        # ]
-
-    def semantic_search(self, query: str, top_k: int = 4) -> List[Dict]:
+    def semantic_search(self, query: str, top_k: int = 20) -> List[Dict]:
         """Chạy semantic search thuần (không có keyword filtering)"""
         semantic_results = self.vector_store.similarity_search_with_score(query=query, k=top_k)
 
@@ -141,8 +124,11 @@ class Retriever:
 if __name__ == "__main__":
     retriever = Retriever()
 
-    query = "Điều 79. Hoạt động vận tải đường bộ trong đô thị"    
-    keywords = ['điều 79', 'Hoạt động vận tải đường bộ trong đô thị', 'Xe buýt phải chạy đúng tuyến', 'Xe vệ sinh môi trường']
+    query = "Theo quy định về tải trọng và khổ giới hạn của xe, Luật giao thông đường bộ đưa ra các biện pháp kiểm soát và xử phạt như thế nào đối với xe vượt quá tải trọng hoặc khổ giới hạn cho phép?"    
+    
+    # Trích xuất keywords từ query
+    extractor = EntityExtractor()
+    keywords = extractor.extract_entities(query)
 
     print("Keyword Search:", retriever.keyword_search(keywords), '\n')
     # print("Semantic Search:", retriever.semantic_search(query), '\n')
