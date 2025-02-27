@@ -1,5 +1,5 @@
 from document_loader import DocumentLoader
-from vector_database import QdrantDatabase
+from vector_store import QdrantDatabase
 from uuid import uuid4
 from rich import print
 from rich import traceback

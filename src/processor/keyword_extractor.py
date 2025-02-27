@@ -11,7 +11,43 @@ from dotenv import load_dotenv
 traceback.install()
 load_dotenv()
 
-class EntityExtractor:
+# Định nghĩa Pydantic schema
+class Entity(BaseModel):
+    """Mô tả các keywords được trích xuất từ truy vấn"""
+    type: str = Field(
+        default="",
+        description="Loại văn bản, ví dụ: 'luật', 'quyết định', 'thông tư'"
+    )
+    title: str = Field(
+        default="",
+        description="Tiêu đề văn bản, ví dụ 'luật giao thông đường bộ'"
+    )
+    number: str = Field(
+        default="",
+        description="Số hiệu văn bản, ví dụ: '01/2021/qđ-ubnd'"
+    )
+    issued_date: str = Field(
+        default="",
+        description="Thời gian ban hành, ví dụ: '01/01/2025', '2025', '01/2025'"
+    )
+    chapter: str = Field(
+        default="",
+        description="Chương, ví dụ: 'chương i', 'chương ii'"
+    )
+    section: str = Field(
+        default="",
+        description="Mục, ví dụ: 'mục 1', 'mục 2'"
+    )
+    article:str = Field(
+        default="",
+        description="Điều luật, ví dụ: 'điều 1', 'điều 2'"
+    )
+    keywords: List[str] = Field(
+        default_factory=list,
+        description="Danh sách các từ khóa quan trọng, ví dụ: ['giao thông', 'đường bộ']"
+    )
+
+class KeywordsExtractor:
     '''Lớp trích xuất thực thể (keywords) từ truy vấn người dùng'''
     def __init__(self):
         self.llm = ChatGoogleGenerativeAI(
@@ -21,22 +57,19 @@ class EntityExtractor:
         self.prompt_template = PromptTemplate(
             input_variables=['query'],
             template="""
-            Hãy trích xuất các thực thể quan trọng trong câu sau:
-            
+            Bạn là một trợ lý AI chuyên xử lý văn bản pháp luật tiếng Việt. Dựa trên câu sau, trích xuất các thực thể quan trọng và trả về theo cấu trúc đã định nghĩa.
+
             Câu: "{query}"
-            
-            Trả về một Dictionary gồm các thực thể quan trọng theo cấu trúc sau đây:
-            - type: loại văn bản (str). (ví dụ: "luật", "quyết định", "thông tư", "nghị quyết"...)
-            - title: tiêu đề văn bản (str). (ví dụ: "luật giao thông đường bộ)
-            - number: số hiệu văn bản (str). (ví dụ: "01/2021/qđ-ubnd")
-            - issued_date: thời gian ban hành (str). (ví dụ: 01/01/2025, 2025, 3/2025...)
-            - chapter: chương (str). (ví dụ: "chương i", "chương ii", "chương iii")
-            - section: mục (str). (ví dụ: "mục 1", "mục 2", "mục 3")
-            - article: điều luật (str). (ví dụ: "điều 1", "điều 2", "điều 3")
-            - keywords: danh sách các thưc thể quan trọng (List[str]). (ví dụ: ["giao thông", "đường bộ", "danh tính", "quyền lợi"])
-            
-            
-            Lưu ý: trường nào không có thì truyền vào chuỗi rỗng"".
+
+            Trả lời bằng cách cung cấp các thông tin sau (nếu không có, bỏ trống):
+            - type: loại văn bản.
+            - title: tiêu đề văn bản.
+            - number: số hiệu văn bản.
+            - issued_date: thời gian ban hành.
+            - chapter: chương.
+            - section: mục.
+            - article: điều luật.
+            - keywords: danh sách các từ khóa quan trọng.
             """
         )
         
@@ -44,12 +77,13 @@ class EntityExtractor:
         """
         Trích xuất thực thể (keywords) từ truy vấn người dùng 
         """
-        
+        if not query or not query.strip():
+            raise ValueError("Truy vấn không được để trống")
         
         prompt_text = self.prompt_template.format(query=query)
-        print(prompt_text)
+        # print(prompt_text)
         response = self.llm.invoke(prompt_text)
-        print(response.content)
+        # print(response)
         
         # Trích xuất thông tin từ response
         try:
@@ -79,8 +113,8 @@ class EntityExtractor:
 
 # Test    
 if __name__ == "__main__":
-    extractor = EntityExtractor()
-    query = "Những điểm mới trong Quyết định 776/QĐ-UBND năm 2016 có ảnh hưởng như thế nào đến quản lý tài nguyên tại địa phương?"
+    extractor = KeywordsExtractor()
+    query = "điều 3 của luật giao thông đường bộ có những nội dung gì?"
     entities = extractor.extract_entities(query.lower())
     print("Parsed Entities:", entities)
     

@@ -10,10 +10,10 @@ class DocumentLoader:
     '''Một lớp để xử lý các tài liệu, trích xuất metadata và chia văn bản thành các phần theo cấu trúc'''
     def __init__(self, file_path: str):
         self.file_path = file_path
-        self.page_content = ''
+        self.page_content = ""
         self.metadata = {}
         
-    def load(self) -> str:
+    def load(self):
         '''Tải nội dung văn bản từ file docx'''
         if not os.path.exists(self.file_path):
             raise FileNotFoundError(f"Không tìm thấy file: {self.file_path}")
@@ -21,7 +21,6 @@ class DocumentLoader:
         loader = Docx2txtLoader(file_path=self.file_path)
         docs = loader.load()
         self.page_content = '\n'.join(doc.page_content for doc in docs)
-        return self.page_content
 
     def extract_metadata(self):
         '''Trích xuất metadata từ nội dung văn bản'''
@@ -43,16 +42,6 @@ class DocumentLoader:
                 'type': type_title_match.group(1).lower(),
                 'title': f"{type_title_match.group(1)} {type_title_match.group(2).strip()}".lower()
             })
-        # if type_title_match:
-        #     type = type_title_match.group(1).lower()
-        #     title = type_title_match.group(2).strip().lower()
-        #     self.metadata.update({
-        #         'type': type,
-        #         'title': {
-        #             'full': f"{type} {title}",
-        #             'segments': word_tokenize(f"{type} {title}")
-        #         }
-        #     })
             
         # Lấy số hiệu văn bản
         number_match = re.search(
@@ -64,25 +53,6 @@ class DocumentLoader:
         # Thêm số hiệu văn bản vào metadata
         if number_match:
             self.metadata['number'] = number_match.group(2).lower()
-        # if number_match:
-        #     number_str = number_match.group(2).lower()
-        #     pattern = r'(?P<code>\d+)/(?P<year>\d{4})/(?P<issuer>\w+)'
-        #     match = re.match(pattern=pattern, string=number_str)
-        #     if match:
-        #         self.metadata['number'] = {
-        #             'full': number_str,
-        #             'code': match.group('code'),
-        #             'year': match.group('year'),
-        #             'issuer': match.group('issuer')
-        #         }
-        #     else:
-        #         # Nếu không khớp với pattern thì chỉ lưu lại dưới dạng str
-        #         self.metadata['number'] = {
-        #             'full': number_str,
-        #             'code': None,
-        #             'year': None,
-        #             'issuer': None
-        #         }
         
         # lấy ngày ban hành
         issued_date_match = re.search(
@@ -92,15 +62,6 @@ class DocumentLoader:
         
         # Thêm ngày ban hành vào trong metadata
         if issued_date_match:
-            # day = issued_date_match.group(2)
-            # month = issued_date_match.group(3)
-            # year = issued_date_match.group(4)
-            # self.metadata['issued_date'] = {
-            #     'day': day,
-            #     'month': month,
-            #     'year': year,
-            #     'full': f"{day}/{month}/{year}" if day and month and year else None 
-            # }
             self.metadata['issued_date'] = f"{issued_date_match.group(2)}/{issued_date_match.group(3)}/{issued_date_match.group(4)}"
         
     def load_and_split(self) -> List[Document]:

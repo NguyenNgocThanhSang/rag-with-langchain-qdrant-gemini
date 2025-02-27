@@ -1,4 +1,5 @@
 import os
+from langchain_core.documents import Document
 from langchain_qdrant import QdrantVectorStore
 from qdrant_client import models
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
@@ -8,11 +9,12 @@ import sys
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.join(current_dir, '..')
 sys.path.insert(0, parent_dir)
-from preprocess.entity_extractor import EntityExtractor
 import requests
 import json
 from rich import print
 from rich import traceback
+
+from src.processor.keyword_extractor import KeywordsExtractor
 
 traceback.install()
 load_dotenv()
@@ -37,99 +39,112 @@ class Retriever:
             metadata_payload_key='metadata'
         )
 
-    def keyword_search(self, keywords: Dict, top_k: int = 10):
+    def keyword_search(self, query:str,  keywords: Dict, top_k: int = 20) -> List[Document]:
         """
         Tìm kiếm chỉ với keyword filtering trên page_content và metadata 
         (Tìm tất cả những chunk chứa nhiều keywords nhất)
         """
         print(keywords)
+    
+        
+        # Tạo danh sách điều kiện
+        metadata_conditions = []
+        page_content_conditions = []
+        
+        # Kiểm tra mà thêm điều kiện cho các trường metadata
+        for field in ['type', 'title', 'number', 'issued_date', 'chapter', 'section', 'article']:
+            value = keywords.get(field, "")
+            if value and value != "":
+                metadata_conditions.append(
+                    models.FieldCondition(
+                        key=f'metadata.{field}',
+                        match=models.MatchText(text=value.lower())
+                    )
+                )
+        
+        # Thêm điều kiện cho keywords trong page_content
+        for keyword in keywords.get('keywords', []):
+            if keyword and keyword.strip():
+                page_content_conditions.append(
+                    models.FieldCondition(
+                        key='page_content',
+                        match=models.MatchText(text=keyword.strip())
+                    )
+                )
+        
+        # Nếu không có điều kiện nào, trả về danh sách rỗng
+        # if not conditions:
+        #     return []
+        
+        print(metadata_conditions)
+        print(page_content_conditions)
         
         keyword_filter = models.Filter(
-            must=[
-                models.FieldCondition(
-                    key="metadata.type",
-                    match=models.MatchText(text=keywords['type'])  
-                ),
-                models.FieldCondition(
-                    key="metadata.title",
-                    match=models.MatchText(text=keywords['title'])
-                ),
-                models.FieldCondition(
-                    key="metadata.issued_date",
-                    match=models.MatchText(text=keywords['issued_date'])
-                ),
-                models.FieldCondition(
-                    key="metadata.chapter",
-                    match=models.MatchText(text=keywords['chapter'])
-                ),
-                models.FieldCondition(
-                    key="metadata.section",
-                    match=models.MatchText(text=keywords['section'])  
-                ),
-                models.FieldCondition(
-                    key="metadata.article",
-                    match=models.MatchText(text=keywords['article'])
-                )
-            ],
-            should=[
-                models.FieldCondition(
-                    key='page_content',
-                    match=models.MatchText(text=keywords)
-                ) for keywords in keywords['keywords']
-            ]
+            must=metadata_conditions,
+            should=page_content_conditions
         )
         
         # Thực hiện tìm kiếm theo keyword
         keyword_results = self.vector_store.similarity_search_with_score(
-            query="",  # Không cần query, chỉ sử dụng filter
+            query=query,
             k=top_k,
             filter=keyword_filter
         )
         
-        return [
-            {
-                'text': doc.page_content,
-                'metadata': doc.metadata,
-                'score': score
-            }
-            for doc, score in keyword_results
-        ]
+        return keyword_results        
 
-    def semantic_search(self, query: str, top_k: int = 20) -> List[Dict]:
+    def semantic_search(self, query: str, top_k: int = 20) -> List[Document]:
         """Chạy semantic search thuần (không có keyword filtering)"""
         semantic_results = self.vector_store.similarity_search_with_score(query=query, k=top_k)
+        
+        return semantic_results
 
-        return [
-            {
-                'text': doc.page_content,
-                'metadata': doc.metadata,
-                'score': score
-            }
-            for doc, score in semantic_results
-        ]
-
-    def hybrid_search(self, query: str, keywords: List[str], top_k: int = 20) -> List[Dict]:
+    def hybrid_search(self, query: str, keywords: Dict, top_k: int = 20) -> List[Document]:
         """Kết hợp keyword search và semantic search"""
         # Tìm kiếm bằng keyword
-        keyword_results = self.keyword_search(query, keywords, top_k)
+        keyword_results = self.keyword_search(keywords, top_k)
 
         # Tìm kiếm bằng semantic search
         semantic_results = self.semantic_search(query, top_k)
-
-        # Kết hợp kết quả của cả 2 phương pháp
-        return keyword_results + semantic_results
+        
+        # Kết hợp kết quả từ cả hai loại search, loại bỏ trùng lặp dựa trên page_content
+        combined_docs = {}
+        for result in keyword_results + semantic_results:
+            doc, score = result
+            text = doc.page_content
+            if text not in combined_docs:
+                combined_docs[text] = {
+                    'document': doc,
+                    'score': 0.0
+                }
+                
+            # Gán trọng số 0.3 cho keyword search và 0.7 cho semantic search
+            if result in keyword_results:
+                combined_docs[text]['score'] += 0.3 * score
+            if result in semantic_results:
+                combined_docs[text]['score'] += 0.7 * score
+                
+        # Sắp xếp kết quả theo score
+        ranked_docs = [
+            doc_data['document'] for doc_data in sorted(combined_docs.values(), key=lambda x: x['score'], reverse=True)[:top_k]
+        ]
+        
+        return ranked_docs
+        
 
 
 # Test code
 if __name__ == "__main__":
     retriever = Retriever()
 
-    query = "Theo quy định về tải trọng và khổ giới hạn của xe, Luật giao thông đường bộ đưa ra các biện pháp kiểm soát và xử phạt như thế nào đối với xe vượt quá tải trọng hoặc khổ giới hạn cho phép?"    
+    query = "Điều 25 của Luật Giao thông Đường bộ quy định gì về việc dừng xe tại nơi đường bộ giao nhau cùng mức với đường sắt khi đèn tín hiệu đỏ bật sáng?"  
     
     # Trích xuất keywords từ query
-    extractor = EntityExtractor()
+    extractor = KeywordsExtractor()
     keywords = extractor.extract_entities(query)
+    
+    
 
-    print("Keyword Search:", retriever.keyword_search(keywords), '\n')
+    print("Keyword Search:", retriever.keyword_search(keywords=keywords, query=query), '\n')
     # print("Semantic Search:", retriever.semantic_search(query), '\n')
     # print("Hybrid Search:", retriever.hybrid_search(query, keywords))

@@ -24,9 +24,6 @@ class QdrantDatabase:
             google_api_key=os.getenv('GEMINI_API_KEY')
         )
         
-        # Kiểm tra collection xem có chưa, nếu chưa có thì tạo mới
-        # self._ensure_collection_exists()
-        
     def _ensure_collection_exists(self):
         """Kiểm tra xem collection có chưa, chưa có thì tạo mới"""
         collections = self.client.get_collections()
