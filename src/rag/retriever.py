@@ -9,8 +9,7 @@ import sys
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.join(current_dir, '..')
 sys.path.insert(0, parent_dir)
-import requests
-import json
+import time 
 from rich import print
 from rich import traceback
 
@@ -99,52 +98,60 @@ class Retriever:
         
         return semantic_results
 
-    def hybrid_search(self, query: str, keywords: Dict, top_k: int = 20) -> List[Document]:
+    def hybrid_search(self, query: str, keywords: Dict, top_k: int = 5) -> List[Document]:
         """Kết hợp keyword search và semantic search"""
+        start_time = time.time()
+        
         # Tìm kiếm bằng keyword
-        keyword_results = self.keyword_search(keywords, top_k)
+        keyword_results = self.keyword_search(query=query, keywords=keywords, top_k=top_k)
 
         # Tìm kiếm bằng semantic search
-        semantic_results = self.semantic_search(query, top_k)
+        semantic_results = self.semantic_search(query=query, top_k=top_k)
         
-        # Kết hợp kết quả từ cả hai loại search, loại bỏ trùng lặp dựa trên page_content
-        combined_docs = {}
-        for result in keyword_results + semantic_results:
-            doc, score = result
-            text = doc.page_content
-            if text not in combined_docs:
-                combined_docs[text] = {
-                    'document': doc,
-                    'score': 0.0
-                }
+        # Tạo tập hợp nội dung từ keyword search và semantic search để kiểm tra trùng lặp
+        keywords_contents = {doc.page_content for doc, _ in keyword_results}
+        semantic_contents = {doc.page_content for doc, _ in semantic_results}
+        
+        # Danh sách kết quả cuối cùng
+        final_results = []
+        seen_contents = set() # Sử dụng set để kiểm tra trùng lặp nhanh hơn
+        
+        # 1.Ưu tiên các kết quả xuất hiện ở cả keyword_search và semantic_search
+        for keyword_doc, keyword_score in keyword_results:
+            if keyword_doc.page_content in semantic_contents:
+                final_results.append(keyword_doc)
+                seen_contents.add(keyword_doc.page_content)
                 
-            # Gán trọng số 0.3 cho keyword search và 0.7 cho semantic search
-            if result in keyword_results:
-                combined_docs[text]['score'] += 0.3 * score
-            if result in semantic_results:
-                combined_docs[text]['score'] += 0.7 * score
+        # 2. Thêm các kết quả chỉ có trong keyword_search (không trùng với semantic)
+        for keyword_docs, keyword_score in keyword_results:
+            if keyword_doc.page_content not in seen_contents:
+                final_results.append(keyword_doc)
+                seen_contents.add(keyword_doc.page_content)
+
+        # 3. Nếu vẫn chưa đủ top_k, có thể bổ sung thêm từ semantich_search
+        for semantic_doc, semantic_score in semantic_results:
+            if semantic_doc.page_content not in seen_contents and len(final_results) < top_k:
+                final_results.append(semantic_doc)
+                seen_contents.add(semantic_doc.page_content)
                 
-        # Sắp xếp kết quả theo score
-        ranked_docs = [
-            doc_data['document'] for doc_data in sorted(combined_docs.values(), key=lambda x: x['score'], reverse=True)[:top_k]
-        ]
-        
-        return ranked_docs
-        
+        end_time = time.time()
+        excution_time = end_time - start_time
+        print(f"Thời gian truy xuất: {excution_time:.4f} seconds")
+                
+        return final_results
 
+# # Test code
+# if __name__ == "__main__":
+#     retriever = Retriever()
 
-# Test code
-if __name__ == "__main__":
-    retriever = Retriever()
-
-    query = "Điều 25 của Luật Giao thông Đường bộ quy định gì về việc dừng xe tại nơi đường bộ giao nhau cùng mức với đường sắt khi đèn tín hiệu đỏ bật sáng?"  
+#     query = "Điều 25 của Luật Giao thông Đường bộ quy định gì về việc dừng xe tại nơi đường bộ giao nhau cùng mức với đường sắt khi đèn tín hiệu đỏ bật sáng?"  
     
-    # Trích xuất keywords từ query
-    extractor = KeywordsExtractor()
-    keywords = extractor.extract_entities(query)
+#     # Trích xuất keywords từ query
+#     extractor = KeywordsExtractor()
+#     keywords = extractor.extract_entities(query)
     
     
 
-    print("Keyword Search:", retriever.keyword_search(keywords=keywords, query=query), '\n')
-    # print("Semantic Search:", retriever.semantic_search(query), '\n')
-    # print("Hybrid Search:", retriever.hybrid_search(query, keywords))
+#     # print("Keyword Search:", retriever.keyword_search(keywords=keywords, query=query), '\n')
+#     # print("Semantic Search:", retriever.semantic_search(query), '\n')
+#     print("Hybrid Search:", retriever.hybrid_search(query, keywords))
