@@ -111,14 +111,14 @@ class KeywordsExtractor:
         except Exception as e:
             raise Exception("Lỗi khi chuyển đổi Dict sang JSON: " + str(e))
 
-# Test    
-if __name__ == "__main__":
-    extractor = KeywordsExtractor()
-    query = "điều 3 của luật giao thông đường bộ có những nội dung gì?"
-    entities = extractor.extract_entities(query.lower())
-    print("Parsed Entities:", entities)
+# # Test    
+# if __name__ == "__main__":
+#     extractor = KeywordsExtractor()
+#     query = "điều 3 của luật giao thông đường bộ có những nội dung gì?"
+#     entities = extractor.extract_entities(query.lower())
+#     print("Parsed Entities:", entities)
     
-    json_string = extractor.dict_to_json(entities)
-    print("JSON String:\n", json_string)
+#     json_string = extractor.dict_to_json(entities)
+#     print("JSON String:\n", json_string)
     
     

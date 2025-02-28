@@ -10,7 +10,7 @@ retriever = Retriever()
 generator = Generator(temperature=0.9)
 extractor = KeywordsExtractor()
 
-query = "thông tin về việc đội mũ bảo hiểm"
+query = "hành vi sử dụng thông tin, dữ liệu khí tượng thủy văn không đúng mục đích bị phạt bao nhiêu tiền?"
 
 keywords = extractor.extract_entities(query)
 print(keywords)

@@ -45,7 +45,7 @@ class DocumentLoader:
             
         # Lấy số hiệu văn bản
         number_match = re.search(
-            r'(Số|Số hiệu|Luật số):\s*([\d/\-A-Z]+)', 
+            r'(Số|Số hiệu|Luật số|Nghị định số):\s*([\d/\-A-ZĐ]+)', 
             self.page_content,
             re.IGNORECASE
         )
