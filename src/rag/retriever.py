@@ -140,18 +140,3 @@ class Retriever:
                 
         return final_results
 
-# # Test code
-# if __name__ == "__main__":
-#     retriever = Retriever()
-
-#     query = "Điều 25 của Luật Giao thông Đường bộ quy định gì về việc dừng xe tại nơi đường bộ giao nhau cùng mức với đường sắt khi đèn tín hiệu đỏ bật sáng?"  
-    
-#     # Trích xuất keywords từ query
-#     extractor = KeywordsExtractor()
-#     keywords = extractor.extract_entities(query)
-    
-    
-
-#     # print("Keyword Search:", retriever.keyword_search(keywords=keywords, query=query), '\n')
-#     # print("Semantic Search:", retriever.semantic_search(query), '\n')
-#     print("Hybrid Search:", retriever.hybrid_search(query, keywords))

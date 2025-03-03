@@ -1,50 +1,64 @@
+# main.py
 import streamlit as st
-from src.rag.retriever import Retriever
-from src.rag.generator import Generator
-from src.processor.keyword_extractor import KeywordsExtractor
-import os
+from src.rag.rag_pipeline import RAGPipeline
 from dotenv import load_dotenv
+import os
 
 # Tải biến môi trường từ file .env
 load_dotenv()
 
-# Khởi tạo các thành phần RAG
-retriever = Retriever()
-generator = Generator(temperature=0.9)  # Sử dụng temperature như trong code của bạn
-extractor = KeywordsExtractor()
+# Khởi tạo RAG Pipeline
+@st.cache_resource
+def initialize_rag():
+    rag = RAGPipeline(
+        collection_name="legal_docs",
+        model=os.getenv("MODEL_NAME", "gemini-2.0-flash-exp")
+    )
+    return rag
 
-# Cấu hình trang Streamlit với độ rộng tối đa
-st.set_page_config(
-    page_title="RAG Demo: Hỏi đáp với tài liệu",
-    page_icon="🦜",
-    layout="wide"  # Sử dụng layout "wide" để mở rộng theo chiều ngang
-)
+def main():
+    # Thiết lập cấu hình trang
+    st.set_page_config(
+        page_title="RAG Demo",
+        page_icon="🦜",
+        layout="wide",
+        initial_sidebar_state="expanded"
+    )
 
-st.title("🦜 RAG Demo: Hỏi đáp với tài liệu")
+    # Khởi tạo RAG nếu chưa có
+    if "rag" not in st.session_state:
+        with st.spinner("Đang khởi tạo hệ thống..."):
+            st.session_state.rag = initialize_rag()
+    rag = st.session_state.rag
 
-# Ô nhập truy vấn
-query = st.text_input("Nhập câu hỏi của bạn:", placeholder="Ví dụ: Hành vi sử dụng thông tin, dữ liệu khí tượng thủy văn không đúng mục đích bị phạt bao nhiêu tiền?")
+    # Tạo sidebar
+    with st.sidebar:
+        st.header("Chatbot")
+        "[View the source code](https://github.com/streamlit/llm-examples/blob/main/Chatbot.py)"
+        "[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)"
 
-if st.button("Gửi"):
-    if query:
-        st.info("Đang xử lý câu hỏi...")
+    # Tiêu đề và mô tả
+    st.title("💬 Chatbot")
+    st.caption("🚀 A Streamlit chatbot powered by Gemini")
+
+    # Khởi tạo lịch sử chat
+    if "messages" not in st.session_state:
+        st.session_state.messages = [{"role": "assistant", "content": "How can I help you?"}]
+
+    # Hiển thị lịch sử chat
+    for msg in st.session_state.messages:
+        st.chat_message(msg["role"]).write(msg["content"])
+
+    # Nhập câu hỏi từ người dùng
+    if prompt := st.chat_input("Your message"):
+        st.session_state.messages.append({"role": "user", "content": prompt})
+        st.chat_message("user").write(prompt)
         
-        # Trích xuất từ khóa
-        keywords = extractor.extract_entities(query)
-        st.write("Từ khóa trích xuất:")
-        st.json(keywords)  # Hiển thị từ khóa dưới dạng JSON để dễ đọc
+        # Sử dụng RAGPipeline để tạo câu trả lời
+        with st.spinner("Đang xử lý..."):
+            response = rag.run(query=prompt, top_k=5)
+            st.session_state.messages.append({"role": "assistant", "content": response})
+            st.chat_message("assistant").write(response)
 
-        # Tìm kiếm tài liệu bằng retriever (hybrid search)
-        retrieved_docs = retriever.hybrid_search(query=query, keywords=keywords)
-        
-        if not retrieved_docs:
-            st.warning("Không tìm thấy tài liệu liên quan.")
-        else:
-            # Tạo câu trả lời bằng generator
-            answer = generator.generate_answer(question=query, retrieved_docs=retrieved_docs)
-            st.success("Câu trả lời:")
-            st.write(answer)
-
-# Hiển thị thông tin bổ sung
-st.markdown("---")
-st.write("Ứng dụng RAG sử dụng Retriever, Generator và KeywordsExtractor để trả lời dựa trên tài liệu trong Qdrant.")
+if __name__ == "__main__":
+    main()
