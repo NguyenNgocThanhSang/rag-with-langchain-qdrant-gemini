@@ -24,7 +24,7 @@ class RAGPipeline:
         # Khởi tạo KeywordsExtractor
         self.keywords_extractor = KeywordsExtractor()
         
-    def run(self, query: str, keywords: Dict = None, top_k: int = 5) -> str:
+    def run(self, query: str, keywords: Dict = None, top_k: int = 10) -> str:
         """
         Chạy pipeline RAG: truy xuất tài liệu và tạo câu trả lời
         

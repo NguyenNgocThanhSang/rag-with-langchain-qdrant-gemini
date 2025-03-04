@@ -110,7 +110,7 @@ class Retriever:
         
         # Tìm kiếm bằng keyword
         keyword_results = self.keyword_search(query=query, keywords=keywords, top_k=top_k)
-
+        print(keyword_results)
         # Tìm kiếm bằng semantic search
         semantic_results = self.semantic_search(query=query, top_k=top_k)
         

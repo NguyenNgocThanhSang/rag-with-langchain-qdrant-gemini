@@ -17,6 +17,8 @@ print(keywords)
 
 retrieved_docs = retriever.hybrid_search(query=query, keywords=keywords)
 
+print(retrieved_docs)
+
 answer = generator.generate_answer(question=query, retrieved_docs=retrieved_docs)
 
 print(answer)
