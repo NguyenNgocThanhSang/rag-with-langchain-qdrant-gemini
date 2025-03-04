@@ -3,6 +3,7 @@ import streamlit as st
 from src.rag.rag_pipeline import RAGPipeline
 from dotenv import load_dotenv
 import os
+import time
 
 # Tải biến môi trường từ file .env
 load_dotenv()
@@ -56,9 +57,17 @@ def main():
         
         # Sử dụng RAGPipeline để tạo câu trả lời
         with st.spinner("Đang xử lý..."):
+            start_time = time.time()
             response = rag.run(query=prompt, top_k=5)
+            end_time = time.time()
+            elapsed_time = end_time - start_time
+            
             st.session_state.messages.append({"role": "assistant", "content": response})
             st.chat_message("assistant").write(response)
+            
+            # Hiển thị thời gian như một câu nhỏ bên dưới
+            st.caption(f"Thời gian xử lý: {elapsed_time:.2f} giây")
+            
 
 if __name__ == "__main__":
     main()

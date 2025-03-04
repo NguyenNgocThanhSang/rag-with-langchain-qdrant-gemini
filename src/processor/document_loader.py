@@ -8,10 +8,11 @@ from underthesea import word_tokenize
 
 class DocumentLoader:
     '''Một lớp để xử lý các tài liệu, trích xuất metadata và chia văn bản thành các phần theo cấu trúc'''
-    def __init__(self, file_path: str):
+    def __init__(self, file_path: str, original_file: str = None):
         self.file_path = file_path
         self.page_content = ""
         self.metadata = {}
+        self.original_filename=""
         
     def load(self):
         '''Tải nội dung văn bản từ file docx'''
@@ -24,6 +25,8 @@ class DocumentLoader:
 
     def extract_metadata(self):
         '''Trích xuất metadata từ nội dung văn bản'''
+        # Dùng original_filename nếu có, nếu không thì dùng basename của file_path
+        # self.metadata = {'source': self.original_filename or os.path.basename(self.file_path)}
         self.metadata = {'source': os.path.basename(self.file_path)}
         
         # Lấy loại và tên của văn bản
