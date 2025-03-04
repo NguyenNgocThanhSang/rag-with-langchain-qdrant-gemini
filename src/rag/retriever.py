@@ -85,15 +85,15 @@ class Retriever:
         print(page_content_conditions)
         
         keyword_filter = models.Filter(
-            must=metadata_conditions,
-            should=page_content_conditions
+            must=metadata_conditions if metadata_conditions else None,
+            min_should=models.MinShould(conditions=page_content_conditions, min_count=0) if page_content_conditions else None
         )
         
         # Thực hiện tìm kiếm theo keyword
         keyword_results = self.vector_store.similarity_search_with_score(
             query=query,
             k=top_k,
-            filter=keyword_filter
+            filter=keyword_filter if (metadata_conditions or page_content_conditions) else None
         )
         
         return keyword_results        
