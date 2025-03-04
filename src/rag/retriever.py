@@ -54,12 +54,22 @@ class Retriever:
         for field in ['type', 'title', 'number', 'issued_date', 'chapter', 'section', 'article']:
             value = keywords.get(field, "")
             if value and value != "":
-                metadata_conditions.append(
+                if field == "article":
+                    # Chuẩn hóa giá trị tìm kiếm cho article
+                    article_value = f"điều {value}" if value.isdigit() else value.lower()
+                    metadata_conditions.append(
                     models.FieldCondition(
                         key=f'metadata.{field}',
-                        match=models.MatchText(text=value.lower())
+                        match=models.MatchValue(value=article_value)
                     )
                 )
+                else:
+                    metadata_conditions.append(
+                        models.FieldCondition(
+                            key=f'metadata.{field}',
+                            match=models.MatchText(text=value.lower())
+                        )
+                    )
         
         # Thêm điều kiện cho keywords trong page_content
         for keyword in keywords.get('keywords', []):
@@ -70,10 +80,6 @@ class Retriever:
                         match=models.MatchText(text=keyword.strip())
                     )
                 )
-        
-        # Nếu không có điều kiện nào, trả về danh sách rỗng
-        # if not conditions:
-        #     return []
         
         print(metadata_conditions)
         print(page_content_conditions)
@@ -140,3 +146,18 @@ class Retriever:
                 
         return final_results
 
+# Test code
+# if __name__ == "__main__":
+#     retriever = Retriever()
+
+#     query = "điều 3 nghị định 155"    
+
+#     # Trích xuất keywords từ query
+#     extractor = KeywordsExtractor()
+#     keywords = extractor.extract_entities(query)
+    
+    
+
+#     # print("Keyword Search:", retriever.keyword_search(keywords=keywords, query=query), '\n')
+#     # print("Semantic Search:", retriever.semantic_search(query), '\n')
+#     print("Hybrid Search:", retriever.hybrid_search(query=query, keywords=keywords))
