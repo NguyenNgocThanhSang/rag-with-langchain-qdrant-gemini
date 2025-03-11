@@ -12,7 +12,7 @@ import time
 load_dotenv()
 
 class QdrantDatabase:
-    def __init__(self, collection_name:str = 'legal_docs'):
+    def __init__(self, collection_name:str = 'hpt_rag_pipeline'):
         """Khởi tạo kết nối với Qdrant và xác định collection để lưu dữ liệu"""
         self.collection_name = collection_name
         self.client = QdrantClient(

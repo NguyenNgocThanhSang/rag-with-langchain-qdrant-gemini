@@ -12,7 +12,7 @@ load_dotenv()
 
 class RAGPipeline:
     """Pipeline RAG cho hệ thống hỏi đáp với tài liệu pháp lý"""
-    def __init__(self, collection_name: str = 'legal_docs', model: str = os.getenv("MODEL_NAME")):
+    def __init__(self, collection_name: str = 'hpt_rag_pipeline', model: str = os.getenv("MODEL_NAME")):
         """Khởi tạo RAG Pipeline với Retriever và Generator"""
 
         # Khởi tạo Retriever

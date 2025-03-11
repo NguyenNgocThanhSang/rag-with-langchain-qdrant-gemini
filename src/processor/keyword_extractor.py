@@ -59,7 +59,7 @@ class KeywordsExtractor:
             template="""
             Bạn là một trợ lý AI chuyên xử lý văn bản pháp luật tiếng Việt. Dựa trên câu sau, trích xuất các thực thể quan trọng và trả về theo cấu trúc đã định nghĩa.
 
-            Câu: "{query}"
+            Câu query: "{query}"
 
             Trả lời bằng cách cung cấp các thông tin sau (nếu không có, bỏ trống):
             - type: loại văn bản.
@@ -70,6 +70,8 @@ class KeywordsExtractor:
             - section: mục.
             - article: điều luật.
             - keywords: danh sách các từ khóa quan trọng.
+
+            Lưu ý: Giữ nguyên kiểu chữ hoa/thường từ câu query đầu vào.
             """
         )
         
