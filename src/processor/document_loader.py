@@ -34,7 +34,7 @@ class DocumentLoader:
             # r'\b(LUẬT|NGHỊ ĐỊNH|THÔNG TƯ|NGHỊ QUYẾT|QUYẾT ĐỊNH|CHỈ THỊ)\b[\s\n]+([A-ZÀ-Ỵ\s]{5,100}?)(?=\s*Căn cứ|Điều|Chương|Mục|Phần|$))',
             r'\b(LUẬT|NGHỊ ĐỊNH|THÔNG TƯ|QUYẾT ĐỊNH|CHỈ THỊ)\b'  # Loại văn bản pháp luật
             r'[\s\n]+'  # Cho phép khoảng trắng hoặc xuống dòng sau loại văn bản
-            r'([A-ZÀ-Ỵ\s]{5,100}?)'  # Tiêu đề văn bản (viết hoa, tối thiểu 5 ký tự, tối đa 100 ký tự)
+            r'([A-ZÀ-Ỵ\s]{5,200}?)'  # Tiêu đề văn bản (viết hoa, tối thiểu 5 ký tự, tối đa 100 ký tự)
             r'(?=\s*(Căn cứ|Điều|Chương|Mục|Phần|$))',  # Kết thúc trước một từ khóa pháp lý quan trọng
             self.page_content
         )

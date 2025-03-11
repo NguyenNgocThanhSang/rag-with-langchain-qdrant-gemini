@@ -19,13 +19,13 @@ traceback.install()
 load_dotenv()
 
 class Retriever:
-    def __init__(self, collection_name: str = "legal_docs"):
+    def __init__(self, collection_name: str = "hpt_rag_pipeline"):
         """Khởi tạo kết nối với Qdrant và chuẩn bị vectorstore"""
         self.collection_name = collection_name
 
         # Khởi tạo embedding model (sử dụng Google Generative AI Embeddings)
         self.embedding_model = GoogleGenerativeAIEmbeddings(
-            model="models/text-embedding-004",
+            model=os.getenv('EMBEDDING_MODEL_NAME'),
             google_api_key=os.getenv('GEMINI_API_KEY')
         )
         
@@ -86,7 +86,7 @@ class Retriever:
         
         keyword_filter = models.Filter(
             must=metadata_conditions if metadata_conditions else None,
-            min_should=models.MinShould(conditions=page_content_conditions, min_count=0) if page_content_conditions else None
+            min_should=models.MinShould(conditions=page_content_conditions, min_count=1) if page_content_conditions else None
         )
         
         # Thực hiện tìm kiếm theo keyword
@@ -110,7 +110,7 @@ class Retriever:
         
         # Tìm kiếm bằng keyword
         keyword_results = self.keyword_search(query=query, keywords=keywords, top_k=top_k)
-        print(keyword_results)
+        
         # Tìm kiếm bằng semantic search
         semantic_results = self.semantic_search(query=query, top_k=top_k)
         
@@ -143,6 +143,8 @@ class Retriever:
         end_time = time.time()
         excution_time = end_time - start_time
         print(f"Thời gian truy xuất: {excution_time:.4f} seconds")
+        
+        print(final_results)
                 
         return final_results
 

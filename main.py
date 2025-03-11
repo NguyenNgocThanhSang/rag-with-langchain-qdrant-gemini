@@ -12,7 +12,7 @@ load_dotenv()
 @st.cache_resource
 def initialize_rag():
     rag = RAGPipeline(
-        collection_name="legal_docs",
+        collection_name="hpt_rag_pipeline",
         model=os.getenv("MODEL_NAME", "gemini-2.0-flash-exp")
     )
     return rag
