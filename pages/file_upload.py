@@ -17,7 +17,7 @@ traceback.install()
 def init_qdrant():
     return QdrantDatabase()
 
-vector_store = init_qdrant()
+# vector_store = init_qdrant()
 
 # Giao diện chính
 st.title("📝 Upload file to Qdrant")
@@ -38,6 +38,7 @@ if uploaded_file:
         
         # Upload lên Qdrant
         with st.spinner("Đang tải lên Qdrant..."):
+            vector_store = init_qdrant()
             vector_store.upload(documents=documents)
         end_time = time.time()
         elapsed_time = end_time - start_time

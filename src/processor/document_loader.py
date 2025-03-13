@@ -29,15 +29,18 @@ class DocumentLoader:
         # self.metadata = {'source': self.original_filename or os.path.basename(self.file_path)}
         self.metadata = {'source': os.path.basename(self.file_path)}
         
+        # In dạng raw
+        print("Raw content (first 1000 chars):", repr(self.page_content[:1000]))
+        
+        pattern =  r'\b(LUẬT|NGHỊ ĐỊNH|THÔNG TƯ|QUYẾT ĐỊNH|CHỈ THỊ)\b[\s\xa0\n]*([A-ZÀ-Ỵ\s,;]{5,300}?)(?=\s*(Căn cứ|Điều|Chương|Mục|Phần|$))'
+        
         # Lấy loại và tên của văn bản
         type_title_match = re.search(
-            # r'\b(LUẬT|NGHỊ ĐỊNH|THÔNG TƯ|NGHỊ QUYẾT|QUYẾT ĐỊNH|CHỈ THỊ)\b[\s\n]+([A-ZÀ-Ỵ\s]{5,100}?)(?=\s*Căn cứ|Điều|Chương|Mục|Phần|$))',
-            r'\b(LUẬT|NGHỊ ĐỊNH|THÔNG TƯ|QUYẾT ĐỊNH|CHỈ THỊ)\b'  # Loại văn bản pháp luật
-            r'[\s\n]+'  # Cho phép khoảng trắng hoặc xuống dòng sau loại văn bản
-            r'([A-ZÀ-Ỵ\s]{5,200}?)'  # Tiêu đề văn bản (viết hoa, tối thiểu 5 ký tự, tối đa 100 ký tự)
-            r'(?=\s*(Căn cứ|Điều|Chương|Mục|Phần|$))',  # Kết thúc trước một từ khóa pháp lý quan trọng
-            self.page_content
+            pattern=pattern,
+            string=self.page_content,
         )
+        
+        print(type_title_match)
         
         # thêm trường type và title vào metadata
         if type_title_match:
@@ -67,10 +70,30 @@ class DocumentLoader:
         if issued_date_match:
             self.metadata['issued_date'] = f"{issued_date_match.group(2)}/{issued_date_match.group(3)}/{issued_date_match.group(4)}"
         
+    def remove_appendix(self):
+        '''Xóa phần phụ lục'''
+        # Tìm kiếm các phần phụ lục
+        markers = ["Nơi nhận:", "PHỤ LỤC", "CHỦ TỊCH QUỐC HỘI"]
+        
+        # Tìm vị trí sớm nhất của markers
+        earliest_pos = len(self.page_content)
+        for marker in markers:
+            pos =   self.page_content.find(marker)
+            if pos != -1 and pos < earliest_pos:
+                earliest_pos = pos
+                
+        # Nếu không tìm thấy markers nào, giữ nguyên văn bản
+        if earliest_pos == len(self.page_content):
+            return self.page_content.strip()
+        
+        # Cắt từ đầu văn bản đến marker sớm nhất
+        return self.page_content[:earliest_pos].strip()
+    
     def load_and_split(self) -> List[Document]:
         '''Load tài liệu, trích xuất metadata và chia nhỏ theo chương, mục, điều luật'''
         self.load()
         self.extract_metadata()
+        self.page_content = self.remove_appendix()
         document = Document(page_content=self.page_content, metadata=self.metadata)
         return self._chunk_by_article(self._chunk_by_sections(self._chunk_by_chapter(document=document)))
     
@@ -166,7 +189,7 @@ class DocumentLoader:
                 # Tạo document cho từng điều luật
                 article_docs.append(
                     Document(
-                        page_content=article.strip(),
+                        page_content=article.strip().lower(),
                         metadata={**document.metadata, 'article': article_list}
                     )
                 )
