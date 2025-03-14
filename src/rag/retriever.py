@@ -1,4 +1,5 @@
 import os
+import asyncio
 from langchain_core.documents import Document
 from langchain_qdrant import QdrantVectorStore
 from qdrant_client import QdrantClient, models
@@ -45,7 +46,7 @@ class Retriever:
             metadata_payload_key='metadata'
         )
 
-    def keyword_search(self, keywords: Dict, top_k: int = 20) -> List[Document]:
+    async def keyword_search(self, keywords: Dict, top_k: int = 20) -> List[Document]:
         """
         Tìm kiếm chỉ với keyword filtering trên page_content và metadata 
         (Không dùng vector similarity)
@@ -95,13 +96,17 @@ class Retriever:
             min_should=models.MinShould(conditions=page_content_conditions, min_count=1) if page_content_conditions else None
         )
         
-        # Tìm kiếm bằng Qdrant Client (không dùng vector)
-        keyword_results = self.qdrant_client.scroll(
-            collection_name=self.collection_name,
-            scroll_filter=keyword_filter,
-            limit=top_k,
-            with_payload=True,
-            with_vectors=False
+        # Tìm kiếm bất đồng bộ bằng Qdrant Client (không dùng vector)
+        loop = asyncio.get_event_loop()
+        keyword_results = await loop.run_in_executor(
+            None,
+            lambda: self.qdrant_client.scroll(
+                collection_name=self.collection_name,
+                scroll_filter=keyword_filter,
+                limit=top_k,
+                with_payload=True,
+                with_vectors=False
+            )
         )
         
         # Chuyển đổi kết quả thành Document
@@ -128,77 +133,63 @@ class Retriever:
         
         # return keyword_results        
 
-    def semantic_search(self, query: str, top_k: int = 20) -> List[Document]:
+    async def semantic_search(self, query: str, top_k: int = 20) -> List[Document]:
         """Chạy semantic search thuần dựa trên vector similarity (không có keyword filtering)"""
-        semantic_results = self.vector_store.similarity_search_with_score(query=query, k=top_k)
+        loop = asyncio.get_event_loop()
+        
+        semantic_results = await loop.run_in_executor(
+            None,
+            lambda: self.vector_store.similarity_search_with_score(query=query, k=top_k)
+        )
+        
         print(f"Semantic search results: {len(semantic_results)} docs")
         
         return [(doc, score) for doc, score in semantic_results]
 
-    def hybrid_search(self, query: str, keywords: Dict, top_k: int = 10, use_ranker: bool = False) -> List[Document]:
+    async def hybrid_search(self, query: str, keywords: Dict, top_k: int = 10, use_ranker: bool = False) -> List[Document]:
         """Kết hợp keyword search và semantic search"""
         start_time = time.time()
         
         # Bước 1: Tìm kiếm ban đầu
-        keyword_docs = self.keyword_search(keywords=keywords, top_k=top_k*2) # Lấy nhiều để rerank
-        semantic_results = self.semantic_search(query=query, top_k=top_k*2)
+        keyword_task = self.keyword_search(keywords=keywords, top_k=top_k*2) # Lấy nhiều để rerank
+        semantic_task = self.semantic_search(query=query, top_k=top_k*2)
+        keyword_docs, semantic_results = await asyncio.gather(keyword_task, semantic_task)
+        
         semantic_docs = [doc for doc, _ in semantic_results]
-        semantic_scores = {doc.page_content: score for doc, score in semantic_results}
         
         # Bước 2: gộp kết quả, loại bỏ trùng lặp
         all_docs_dict = {doc.page_content: doc for doc in keyword_docs + semantic_docs}
         all_docs = list(all_docs_dict.values())
         print(f"Tổng chunk trước khi rerank: {len(all_docs)}")
         
-        # Bước 3: Reranking
+        # Bước 3: Reranking với Weighted RRF
         if use_ranker: 
             # Dùng PhoRanker để rerank
             pass
         else: 
-            # Dùng điểm tổng hợp đơn giản (keyword presence + semantic score)
-            final_docs_with_scores = []
-            for doc in all_docs:
-                keyword_score = 1.0 if doc.page_content in [d.page_content for d in keyword_docs] else 0.0
-                semantic_score = semantic_scores.get(doc.page_content, 0.0)
-                total_score = 0.4*keyword_score + 0.6*semantic_score # Trọng số tùy chỉnh
-                final_docs_with_scores.append((doc, total_score))
+            # Dùng điểm tổng hợp đơn giản (keyword presence + semantic score) dựa trên công thức RRF
+            rrf_scores = {}
+            k = 60
             
-            # Sắp xếp theo điểm tổng hợp
+            # Tính rank cho keyword search
+            for rank, doc in enumerate(keyword_docs, 1):
+                content = doc.page_content
+                if content not in rrf_scores:
+                    rrf_scores[content] = 0
+                rrf_scores[content] += 0.4*(1/(k+rank))
+                    
+            # Tính rank cho semantic search
+            for rank, (doc, _) in enumerate(semantic_results, 1):
+                content = doc.page_content
+                if content not in rrf_scores:
+                    rrf_scores[content] = 0
+                rrf_scores[content] += 0.6*(1/(k+rank))
+                
+            # Sắp xếp tài liệu theo RRF
+            final_docs_with_scores = [(doc, rrf_scores.get(doc.page_content, 0)) for doc in all_docs]
             final_docs_with_scores.sort(key=lambda x: x[1], reverse=True)
             final_docs = [doc for doc, _ in final_docs_with_scores[:top_k]]
-        
-        
-        # # Tìm kiếm bằng keyword
-        # keyword_results = self.keyword_search(query=query, keywords=keywords, top_k=top_k)
-        
-        # # Tìm kiếm bằng semantic search
-        # semantic_results = self.semantic_search(query=query, top_k=top_k)
-        
-        # # Tạo tập hợp nội dung từ keyword search và semantic search để kiểm tra trùng lặp
-        # keywords_contents = {doc.page_content for doc, _ in keyword_results}
-        # semantic_contents = {doc.page_content for doc, _ in semantic_results}
-        
-        # # Danh sách kết quả cuối cùng
-        # final_results = []
-        # seen_contents = set() # Sử dụng set để kiểm tra trùng lặp nhanh hơn
-        
-        # # 1.Ưu tiên các kết quả xuất hiện ở cả keyword_search và semantic_search
-        # for keyword_doc, keyword_score in keyword_results:
-        #     if keyword_doc.page_content in semantic_contents:
-        #         final_results.append(keyword_doc)
-        #         seen_contents.add(keyword_doc.page_content)
-                
-        # # 2. Thêm các kết quả chỉ có trong keyword_search (không trùng với semantic)
-        # for keyword_docs, keyword_score in keyword_results:
-        #     if keyword_doc.page_content not in seen_contents:
-        #         final_results.append(keyword_doc)
-        #         seen_contents.add(keyword_doc.page_content)
-
-        # # 3. Nếu vẫn chưa đủ top_k, có thể bổ sung thêm từ semantich_search
-        # for semantic_doc, semantic_score in semantic_results:
-        #     if semantic_doc.page_content not in seen_contents and len(final_results) < top_k:
-        #         final_results.append(semantic_doc)
-        #         seen_contents.add(semantic_doc.page_content)
+            
                 
         end_time = time.time()
         excution_time = end_time - start_time
@@ -208,20 +199,30 @@ class Retriever:
                 
         return final_docs
 
-# Test code
-if __name__ == "__main__":
+async def main():
     retriever = Retriever()
 
-    query = "phạm vi điều chỉnh của luật an toàn thông tin mạng số: 86/2015/QH13"
+    query = "Chở người trên buồng lái quá số lượng quy định;"
     extractor = KeywordsExtractor()
     keywords = extractor.extract_entities(query)
     
-    results = retriever.keyword_search(keywords=keywords)
-    # results = retriever.semantic_search(query=query)
+    # Test keyword search
+    # print("Keyword Search:")
+    # results = await retriever.keyword_search(keywords=keywords)
+    # print(results)
+
+    print("Semantic Search:")
+    results = await retriever.semantic_search(query=query)
     print(results)
-    # # Test hybrid search
-    print("Hybrid Search (simple scoring):")
-    results_simple = retriever.hybrid_search(query=query, keywords=keywords, use_ranker=False)
     
-    # print("\nHybrid Search (Cross-Encoder):")
-    # results_cross = retriever.hybrid_search(query=query, keywords=keywords, use_cross_encoder=True)
+    # # Test hybrid search
+    # print("\nHybrid Search (Weighted RRF):")
+    # results_hybrid = await retriever.hybrid_search(query=query, keywords=keywords, use_ranker=False)
+
+# Test code
+if __name__ == "__main__":
+    asyncio.run(main())
+    
+   
+    
+    

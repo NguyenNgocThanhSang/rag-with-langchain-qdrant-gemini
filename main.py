@@ -4,6 +4,10 @@ from src.rag.rag_pipeline import RAGPipeline
 from dotenv import load_dotenv
 import os
 import time
+import torch
+
+torch.classes.__path__ = [os.path.join(torch.__path__[0], torch.classes.__file__)]
+
 
 # Tải biến môi trường từ file .env
 load_dotenv()
