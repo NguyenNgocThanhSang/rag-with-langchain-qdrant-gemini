@@ -29,9 +29,6 @@ class DocumentLoader:
         # self.metadata = {'source': self.original_filename or os.path.basename(self.file_path)}
         self.metadata = {'source': os.path.basename(self.file_path)}
         
-        # In dạng raw
-        print("Raw content (first 1000 chars):", repr(self.page_content[:1000]))
-        
         pattern =  r'\b(LUẬT|NGHỊ ĐỊNH|THÔNG TƯ|QUYẾT ĐỊNH|CHỈ THỊ)\b[\s\xa0\n]*([A-ZÀ-Ỵ\s,;]{5,300}?)(?=\s*(Căn cứ|Điều|Chương|Mục|Phần|$))'
         
         # Lấy loại và tên của văn bản

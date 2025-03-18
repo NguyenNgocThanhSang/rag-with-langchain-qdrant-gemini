@@ -1,4 +1,5 @@
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAI
+from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from typing import List, Dict, Optional
 from pydantic import BaseModel, Field
@@ -24,7 +25,7 @@ class Entity(BaseModel):
     )
     number: str = Field(
         default="",
-        description="Số hiệu văn bản, ví dụ: '01/2021/qđ-ubnd'"
+        description="Số hiệu văn bản, ví dụ: '01/2021/qđ-ubnd', '155/2025/NĐ-CP'"
     )
     issued_date: str = Field(
         default="",
@@ -53,7 +54,13 @@ class KeywordsExtractor:
         self.llm = ChatGoogleGenerativeAI(
             model=os.getenv('MODEL_NAME'),
             api_key=os.getenv('GEMINI_API_KEY'),
+            temperature=0.7
         )
+        # self.llm = ChatOpenAI(
+        #     model=os.getenv('MODEL_NAME'),
+        #     api_key=os.getenv('OPENAI_API_KEY')
+        # )
+        
         self.prompt_template = PromptTemplate(
             input_variables=['query'],
             template="""
@@ -73,6 +80,8 @@ class KeywordsExtractor:
             **Hướng dẫn**:
             - Giữ nguyên kiểu chữ hoa/thường từ câu truy vấn.
             - Chỉ trích xuất thông tin rõ ràng từ câu truy vấn, không suy đoán nếu như không có dữ liệu.
+            - Nếu truy vấn có dạng 'loại văn bản số hiệu', như 'nghị định 155/2024/NĐ-CP', thì trường `type` là 'nghị định', trường `number` là '155/2024/NĐ-CP' và trường `title` để trống.
+            - Số hiệu văn bản có thể bao gồm chữ số, dấu gạch chéo, và chữ cái như 'NĐ-CP, 'TT-BGDĐT'. Hãy trích xuất toàn bộ chuỗi sau loại văn bản làm số hiệu.
             - Nếu không có thông tin cho một trường, để giá trị mặc định là chuỗi rỗng ("") hoặc danh sách rỗng([]).
             
             ** Ví dụ**:
@@ -88,22 +97,32 @@ class KeywordsExtractor:
 
             2. Truy vấn: "thông tư 01/2021 về giáo dục ban hành ngày 15/03/2021"
                 - type: "thông tư"
-                - title: "thông tư về giáo dục"
+                - title: ""
                 - number: "01/2021"
                 - issued_date: "15/03/2021"
                 - chapter: ""
                 - section: ""
                 - article: ""
                 - keywords: ["giáo dục"]
-            3. Truy vấn: "chương ii mục 1 của nghị định 85/2016/NĐ-CP"
+            3. Truy vấn: "chương ii mục 1 của nghị định 85/2016/nd-cp"
                 - type: "nghị định"
-                - title: "nghị định 85/2016/NĐ-CP"
-                - number: "85/2016/NĐ-CP"
+                - title: ""
+                - number: "85/2016/nđ-cp"
                 - issued_date: ""
                 - chapter: "chương ii"
                 - section: "mục 1"
                 - article: ""
                 - keywords: []
+                
+            4. Truy vấn: "Phạm vi áp dụng của nghị định 155/2024/nđ-cp"
+                - type: "nghị định"
+                - title: ""
+                - number: "155/2024/nđ-cp"
+                - issued_date: ""
+                - chapter: ""
+                - section: ""
+                - article: ""
+                - keyword: ["phạm vi áp dụng"]
 
             Hãy áp dụng cách phân tích tương tự cho câu truy vấn đã cho và trả về kết quả theo định dạng yêu cầu.
             """
@@ -118,25 +137,27 @@ class KeywordsExtractor:
         if not query or not query.strip():
             raise ValueError("Truy vấn không được để trống")
         
+        # Tạo prompt từ template
         prompt_text = self.prompt_template.format(query=query)
-        response = self.structured_llm.invoke(prompt_text)
-        print(response)
         
-        return response.model_dump()
+        # response = self.structured_llm.invoke(prompt_text)
+        # print(response)
         
-        # # Trích xuất thông tin từ response
-        # try:
-        #     content = response.content.strip()
-        #     # Nếu có dấu code block, loại bỏ chúng:
-        #     if content.startswith("```json"):
-        #         content = content[len("```json"):].strip()
-        #     if content.endswith("```"):
-        #         content = content[:-3].strip()
-
-        #     return json.loads(content)
-            
-        # except Exception as e:
-        #     raise Exception("Lỗi khi parse response: ", str(e))
+        # return response.model_dump()
+        
+        response = self.llm.invoke(input=prompt_text)
+        print(response.content)
+        
+        try:
+            content = response.content.strip()
+            # Loại bỏ xấu code block
+            if content.startswith("```json") and content.endswith("```"):
+                content = content[len("```json"):-3].strip()
+                
+            return json.loads(content) 
+                
+        except json.JSONDecodeError as e:
+            raise ValueError(f"Kết quả thô từ llm không hợp kệ: {str(e)}")
         
     def dict_to_json(self, data: Dict) -> str:
         """
@@ -153,11 +174,11 @@ class KeywordsExtractor:
 # Test    
 if __name__ == "__main__":
     extractor = KeywordsExtractor()
-    query = "Điều khiển xe chạy quá tốc độ quy định trên 35 km/h bị phạt bao nhiêu"
+    query = "đối tượng áp dụng của nghị định 155/2024/nđ-cp"
     entities = extractor.extract_entities(query.lower())
     print("Parsed Entities:", entities)
     
-    json_string = extractor.dict_to_json(entities)
-    print("JSON String:\n", json_string)
+    # json_string = extractor.dict_to_json(entities)
+    # print("JSON String:\n", json_string)
     
     
