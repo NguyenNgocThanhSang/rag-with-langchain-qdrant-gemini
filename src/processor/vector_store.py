@@ -12,16 +12,19 @@ import time
 load_dotenv()
 
 class QdrantDatabase:
-    def __init__(self, collection_name:str = 'hpt_rag_pipeline'):
+    def __init__(self, collection_name:str = 'hpt_rag_pipeline', vector_size: int = 768):
         """Khởi tạo kết nối với Qdrant và xác định collection để lưu dữ liệu"""
         self.collection_name = collection_name
+        self.vector_size = vector_size
         self.client = QdrantClient(
             url=os.getenv('QDRANT_API_URL'),
             api_key=os.getenv('QDRANT_API_KEY')
         )
         self.embedding_model=GoogleGenerativeAIEmbeddings(
-            model="models/text-embedding-004",
-            google_api_key=os.getenv('GEMINI_API_KEY')
+            model=os.getenv('EMBEDDING_MODEL_NAME'),
+            google_api_key=os.getenv('GEMINI_API_KEY'),
+            task_type="retrieval_document",
+            output_dimensionality = self.vector_size
         )
         
     def _ensure_collection_exists(self):
@@ -32,7 +35,7 @@ class QdrantDatabase:
             print(f"collection {self.collection_name} chưa tồn tại, đang tạo mới")
             self.client.create_collection(
                 collection_name=self.collection_name,
-                vectors_config=VectorParams(size=768, distance=Distance.COSINE)
+                vectors_config=VectorParams(size=self.vector_size, distance=Distance.COSINE)
             )
         else:
             print(f"Collection {self.collection_name} đã tồn tại.")

@@ -37,7 +37,7 @@ class DocumentLoader:
             string=self.page_content,
         )
         
-        print(type_title_match)
+        # print(type_title_match)
         
         # thêm trường type và title vào metadata
         if type_title_match:

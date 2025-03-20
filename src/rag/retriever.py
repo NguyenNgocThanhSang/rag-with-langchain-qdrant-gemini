@@ -27,7 +27,8 @@ class Retriever:
         # Khởi tạo embedding model (sử dụng Google Generative AI Embeddings)
         self.embedding_model = GoogleGenerativeAIEmbeddings(
             model=os.getenv('EMBEDDING_MODEL_NAME'),
-            google_api_key=os.getenv('GEMINI_API_KEY')
+            google_api_key=os.getenv('GEMINI_API_KEY'),
+            task_type="retrieval_query"
         )
         
         # Khởi tạo Qdrant Client cho keyword search thuần túy
