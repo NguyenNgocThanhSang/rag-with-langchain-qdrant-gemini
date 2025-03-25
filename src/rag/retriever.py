@@ -2,6 +2,7 @@ import os
 from langchain_core.documents import Document
 from langchain_qdrant import QdrantVectorStore
 from qdrant_client import QdrantClient, models
+from qdrant_client.models import ScoredPoint
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from google import genai
 from google.genai.types import EmbedContentConfig 
@@ -28,12 +29,13 @@ class Retriever:
         
         self.embedding_model = genai.Client(api_key=os.getenv('GEMINI_API_KEY'))
 
-        # # Khởi tạo embedding model (sử dụng Google Generative AI Embeddings)
-        # self.embedding_model = GoogleGenerativeAIEmbeddings(
-        #     model=os.getenv('EMBEDDING_MODEL_NAME'),
-        #     google_api_key=os.getenv('GEMINI_API_KEY'),
-        #     task_type="retrieval_query"
-        # )
+        # Khởi tạo embedding model (sử dụng Google Generative AI Embeddings)
+        self.gemini = GoogleGenerativeAIEmbeddings(
+            model=os.getenv('EMBEDDING_MODEL_NAME'),
+            google_api_key=os.getenv('GEMINI_API_KEY'),
+            client=self.embedding_model,
+            task_type="SEMANTIC_SIMILARITY"
+        )
         
         # Khởi tạo Qdrant Client cho keyword search thuần túy
         self.qdrant_client = QdrantClient(
@@ -41,14 +43,14 @@ class Retriever:
             api_key=os.getenv('QDRANT_API_KEY')
         )
         
-        # # Khởi tạo vector store với Qdrant cho semantic search 
-        # self.vector_store = QdrantVectorStore.from_existing_collection(
-        #     embedding=self.embedding_model,
-        #     url=os.getenv('QDRANT_API_URL'),
-        #     api_key=os.getenv('QDRANT_API_KEY'),
-        #     collection_name=self.collection_name,
-        #     metadata_payload_key='metadata'
-        # )
+        # Khởi tạo vector store với Qdrant cho semantic search 
+        self.vector_store = QdrantVectorStore.from_existing_collection(
+            embedding=self.gemini,
+            url=os.getenv('QDRANT_API_URL'),
+            api_key=os.getenv('QDRANT_API_KEY'),
+            collection_name=self.collection_name,
+            metadata_payload_key='metadata'
+        )
         
     def embed_text(self, text:str) -> List[float]:
         response = self.embedding_model.models.embed_content(
@@ -133,33 +135,29 @@ class Retriever:
                 )
             )
             
-        print(f"Keyword search results: {len(keyword_docs)} docs")
+        print(f"Số tài liệu truy xuất theo keywords: {len(keyword_docs)}")
         return keyword_docs    
 
     def semantic_search(self, query: str, top_k: int = 20) -> List[Document]:
         """Chạy semantic search thuần dựa trên vector similarity (không có keyword filtering)"""
-        # semantic_results = self.vector_store.similarity_search_with_score(query=query, k=top_k)
-        
-        # print(f"Semantic search results: {len(semantic_results)} docs")
-        
-        # return [(doc, score) for doc, score in semantic_results]
-        
         query_embedding = self.embed_text(query)
-        search_result = self.qdrant_client.search(
+        
+        search_result = self.qdrant_client.query_points(
             collection_name=self.collection_name,
-            query_vector=query_embedding,
+            query=query_embedding,
             limit=top_k,
-            with_payload=True
+            with_payload=True,
+            # score_threshold=0.5
         )
         
-        print(search_result)
-        
+        print(f"Số tài liệu truy xuất theo semantic: {len(search_result.points)}")
+
         return [
             Document(
                 page_content=hit.payload.get('page_content', ''),
                 metadata = hit.payload.get('metadata', {}),
             )
-            for hit in search_result
+            for hit in search_result.points
         ]
 
     def hybrid_search(self, query: str, keywords: Dict, top_k: int = 5, use_ranker: bool = False) -> List[Document]:
@@ -168,10 +166,10 @@ class Retriever:
         
         # Bước 1: Tìm kiếm ban đầu
         keyword_docs = self.keyword_search(keywords=keywords, top_k=top_k)  # Lấy nhiều để rerank
+        print(keyword_docs)
         
-        semantic_results = self.semantic_search(query=query, top_k=top_k)
-        
-        semantic_docs = [doc for doc, _ in semantic_results]
+        semantic_docs = self.semantic_search(query=query, top_k=top_k)
+        print(semantic_docs)
         
         # Bước 2: Gộp kết quả, loại bỏ trùng lặp
         all_docs_dict = {doc.page_content: doc for doc in keyword_docs + semantic_docs}
@@ -195,7 +193,7 @@ class Retriever:
                 rrf_scores[content] += 0.4 * (1 / (k + rank))
                     
             # Tính rank cho semantic search
-            for rank, (doc, _) in enumerate(semantic_results, 1):
+            for rank, doc in enumerate(semantic_docs, 1):
                 content = doc.page_content
                 if content not in rrf_scores:
                     rrf_scores[content] = 0
@@ -209,15 +207,21 @@ class Retriever:
         end_time = time.time()
         excution_time = end_time - start_time
         print(f"Thời gian truy xuất: {excution_time:.4f} seconds")
-        
-        print(final_docs)
                 
         return final_docs
+    
+    def test_semantic(self, query: str):
+        results = self.vector_store.similarity_search_with_score(
+            query=query,
+            k=5
+        )
+        
+        print(results)
 
 def main():
     retriever = Retriever()
 
-    query = "hồ sơ phê duyệt đề xuất cấp độ bao gồm những gì?"
+    query = "thẩm quyền thẩm định và phê duyệt cấp độ hệ thống thông tin được quy định như thế nào?"
 
     # extractor = KeywordsExtractor()
     # keywords = extractor.extract_entities(query)
@@ -226,13 +230,15 @@ def main():
     # results = retriever.keyword_search(keywords=keywords)
     # print(results)
 
-    print("Semantic Search:")
-    results = retriever.semantic_search(query=query)
-    print(results)
+    # print("Semantic Search:")
+    # results = retriever.semantic_search(query=query)
+    # print(results)
     
-    # # Test hybrid search
+    # Test hybrid search
     # print("\nHybrid Search (Weighted RRF):")
     # results_hybrid = retriever.hybrid_search(query=query, keywords=keywords, use_ranker=False)
+    # print(results_hybrid)
+    retriever.test_semantic(query)
 
 # Test code
 if __name__ == "__main__":

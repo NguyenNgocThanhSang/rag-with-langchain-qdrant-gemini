@@ -146,7 +146,6 @@ class KeywordsExtractor:
         # return response.model_dump()
         
         response = self.llm.invoke(input=prompt_text)
-        print(response.content)
         
         try:
             content = response.content.strip()
