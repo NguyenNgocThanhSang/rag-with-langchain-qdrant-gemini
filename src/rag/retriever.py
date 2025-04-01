@@ -211,7 +211,7 @@ class Retriever:
         return final_docs
     
     def test_semantic(self, query: str):
-        results = self.vector_store.similarity_search_with_score(
+        results = self.vector_store.similarity_search_with_relevance_scores(
             query=query,
             k=5
         )
@@ -223,22 +223,22 @@ def main():
 
     query = "thẩm quyền thẩm định và phê duyệt cấp độ hệ thống thông tin được quy định như thế nào?"
 
-    # extractor = KeywordsExtractor()
-    # keywords = extractor.extract_entities(query)
+    extractor = KeywordsExtractor()
+    keywords = extractor.extract_entities(query)
     
-    # print("Keyword Search:")
-    # results = retriever.keyword_search(keywords=keywords)
-    # print(results)
+    print("Keyword Search:")
+    results = retriever.keyword_search(keywords=keywords)
+    print(results)
 
-    # print("Semantic Search:")
-    # results = retriever.semantic_search(query=query)
-    # print(results)
+    print("Semantic Search:")
+    results = retriever.semantic_search(query=query)
+    print(results)
     
     # Test hybrid search
     # print("\nHybrid Search (Weighted RRF):")
     # results_hybrid = retriever.hybrid_search(query=query, keywords=keywords, use_ranker=False)
     # print(results_hybrid)
-    retriever.test_semantic(query)
+    # retriever.test_semantic(query)
 
 # Test code
 if __name__ == "__main__":
