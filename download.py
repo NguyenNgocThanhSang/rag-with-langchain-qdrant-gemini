@@ -1,4 +1,6 @@
 import py_vncorenlp
+from rich import traceback, print
+traceback.install()
 
 save_dir = './models/vncorenlp'
 

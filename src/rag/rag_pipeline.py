@@ -12,19 +12,23 @@ load_dotenv()
 
 class RAGPipeline:
     """Pipeline RAG cho hệ thống hỏi đáp với tài liệu pháp lý"""
-    def __init__(self, collection_name: str = 'hpt_rag_pipeline', model: str = os.getenv("MODEL_NAME")):
+    def __init__(self, 
+                 collection_name: str = 'hpt_rag_pipeline', 
+                 gemini_model: str = os.getenv("MODEL_NAME", 'gemini-2.0-flash-exp'),
+                 openai_model:str = 'llm-large-v4',
+                ):
         """Khởi tạo RAG Pipeline với Retriever và Generator"""
 
         # Khởi tạo Retriever
         self.retriever = Retriever(collection_name=collection_name)
         
         # Khởi tạo Generator với mô hình Gemini
-        self.generator = Generator(model=model)
+        self.generator = Generator(gemini_model=gemini_model, openai_model=openai_model)
         
         # Khởi tạo KeywordsExtractor
         self.keywords_extractor = KeywordsExtractor()
         
-    def run(self, query: str, keywords: Dict = None, top_k: int = 10) -> str:
+    def run(self, query: str, keywords: Dict = None, top_k: int = 10) -> Dict[str, str]:
         """
         Chạy pipeline RAG: truy xuất tài liệu và tạo câu trả lời
         
@@ -42,12 +46,17 @@ class RAGPipeline:
             retrieved_docs = self.retriever.hybrid_search(query=query, keywords=keywords, top_k=top_k)
 
             # Tạo câu trả lời từ Generator
-            answer = self.generator.generate_answer(question=query, retrieved_docs=retrieved_docs)
+            answers = self.generator.compare_answer(question=query, retrieved_docs=retrieved_docs)
+            # answer = self.generator.generate_answer(question=query, retrieved_docs=retrieved_docs)
             
-            return answer
+            return answers
         
         except Exception as e:
-            return f"Lỗi trong Pipeline RAG: {str(e)}"
+            # return f"Lỗi trong Pipeline RAG: {str(e)}"
+            return {
+                "Gemini": f"Lỗi trong Pipeline RAG (Gemini): {str(e)}",
+                "OpenAI": f"Lỗi trong Pipeline RAG (OpenAI): {str(e)}"
+            }
         
 # if __name__ == "__main__":
 #     pipeline = RAGPipeline()

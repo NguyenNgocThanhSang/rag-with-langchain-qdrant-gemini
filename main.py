@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 import os
 import time
 import torch
+from rich import traceback
+traceback.install()
 
 torch.classes.__path__ = [os.path.join(torch.__path__[0], torch.classes.__file__)]
 
@@ -17,7 +19,8 @@ load_dotenv()
 def initialize_rag():
     rag = RAGPipeline(
         collection_name="hpt_rag_pipeline",
-        model=os.getenv("MODEL_NAME", "gemini-2.0-flash-exp")
+        gemini_model=os.getenv("MODEL_NAME", "gemini-2.0-flash-exp"),
+        openai_model="llm-large-v4"
     )
     return rag
 
@@ -44,7 +47,7 @@ def main():
 
     # Tiêu đề và mô tả
     st.title("💬 Chatbot")
-    st.caption("🚀 A Streamlit chatbot powered by Gemini")
+    st.caption("🚀 A Streamlit chatbot comparing Gemini and OpenAI")
 
     # Khởi tạo lịch sử chat
     if "messages" not in st.session_state:
@@ -59,19 +62,29 @@ def main():
         st.session_state.messages.append({"role": "user", "content": prompt})
         st.chat_message("user").write(prompt)
         
-        # Sử dụng RAGPipeline để tạo câu trả lời
+        # Sử dụng RAGPipeline để tạo câu trả lời từ cả hai mô hình
         with st.spinner("Đang xử lý..."):
             start_time = time.time()
             response = rag.run(query=prompt, top_k=5)
             end_time = time.time()
             elapsed_time = end_time - start_time
             
-            st.session_state.messages.append({"role": "assistant", "content": response})
-            st.chat_message("assistant").write(response)
+            # Lưu và hiển thị câu trả lời từ Gemini
+            gemini_response = response["Gemini"]
+            st.session_state.messages.append({"role": "assistant", "content": f"Gemini: {gemini_response}"})
+            with st.chat_message("assistant"):
+                st.markdown("**Gemini:**")
+                st.write(gemini_response)
             
-            # Hiển thị thời gian như một câu nhỏ bên dưới
+            # Lưu và hiển thị câu trả lời từ OpenAI
+            openai_response = response["OpenAI"]
+            st.session_state.messages.append({"role": "assistant", "content": f"OpenAI: {openai_response}"})
+            with st.chat_message("assistant"):
+                st.markdown("**OpenAI:**")
+                st.write(openai_response)
+            
+            # Hiển thị thời gian xử lý
             st.caption(f"Thời gian xử lý: {elapsed_time:.2f} giây")
-            
 
 if __name__ == "__main__":
     main()
